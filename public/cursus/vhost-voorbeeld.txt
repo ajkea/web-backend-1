@@ -1,0 +1,9 @@
+<VirtualHost web-backend.local:* > 
+    DocumentRoot "C:\map-naar-web-backend-cursus" 
+    ServerName web-backend.local 
+    <Directory "C:\map-naar-web-backend-cursus"> 
+        AllowOverride All
+        Require all granted
+        Options +Indexes 
+    </Directory> 
+</VirtualHost>
