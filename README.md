@@ -36,7 +36,7 @@ Complete Web Backend Course (PHP)
 
 ## Je eigen oplossingen uploaden naar je online repository
 
-  - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten.
+  - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten en voer de voorgestelde bewerkingen uit.
 
   - Telkens wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
 
@@ -52,24 +52,19 @@ Complete Web Backend Course (PHP)
        git status
        ````
 
-    3. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
-       ````
-       git status
-       ````
-
-    4. Voeg de wijzigingen/toevoegingen/weglating toe aan je lokale repository 
+    3. Voeg de wijzigingen/toevoegingen/weglating toe aan je lokale repository 
        ````
        git add .
        ````
     De `.` staat voor de hele working directory
 
-    5. Finaliseer je wijzigingen door deze aan de repository toe te voegen. Voeg best ook een boodschap toe
+    4. Finaliseer je wijzigingen door deze aan de repository toe te voegen. Voeg best ook een boodschap toe
        ````
        git commit -m "Oplossing toegevoegd"
        ````
     De `-m` staat voor "message". Je voegt best iedere keer een beschrijving toe van wat je in deze commit hebt uitgevoerd.
 
-    6. Voeg je lokale repository samen met de repository die online op je GitHub-account staat
+    5. Voeg je lokale repository samen met de repository die online op je GitHub-account staat
        ````
        git push origin master
        ````
