@@ -70,7 +70,7 @@ Complete Web Backend Course (PHP)
        ````
        git push origin master
        ````
-    De `origin` staat voor url van je GitHub oplossingen repository.
+    De `origin` staat voor url van je GitHub oplossingen repository. De `master` staat voor je lokale versie.
 
 ## License
 
