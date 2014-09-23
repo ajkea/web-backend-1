@@ -17,6 +17,7 @@ Complete Web Backend Course (PHP)
        ````
 
   - Stel een virtual host in met als url `web-backend.local` in het host bestand (zie slides virtual-server-setup.pdf)
+  
   - Stel in XAMPP (of andere virtual server) de virtual hosts zo in dat alle http://web-backend.local requests omgeleid worden naar de fysieke map waar de repository is gedownload (`\user\dropbox\web-backend\cursus`)
 
 ## Nieuwste versie van de cursus ophalen
