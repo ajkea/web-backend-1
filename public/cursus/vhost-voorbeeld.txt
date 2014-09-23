@@ -4,6 +4,7 @@
     <Directory "C:\map-naar-web-backend-cursus"> 
         AllowOverride All
         Require all granted
-        Options +Indexes 
+        Options +Indexes
+        IndexOptions NameWidth=*
     </Directory> 
 </VirtualHost>
