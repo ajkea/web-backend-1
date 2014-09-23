@@ -38,7 +38,7 @@ Complete Web Backend Course (PHP)
 
   - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten.
 
-  - Telkens Wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
+  - Telkens wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
 
   - Open de CLI en voer de volgende commands uit:
 
