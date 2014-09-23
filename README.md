@@ -4,6 +4,7 @@ Complete Web Backend Course (PHP)
 ## Installation
 
   - Download deze repository naar een map op jouw harde schijf door middel van de [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
+
     1. Navigeer naar de map waar de cursus moet staan:
     
        ````
@@ -17,6 +18,9 @@ Complete Web Backend Course (PHP)
 
   - Stel een virtual host in met als url `web-backend.local` in het host bestand (zie slides virtual-server-setup.pdf)
   - Stel in XAMPP (of andere virtual server) de virtual hosts zo in dat alle http://web-backend.local requests omgeleid worden naar de fysieke map waar de repository is gedownload (`\user\dropbox\web-backend\cursus`)
+
+## Nieuwste versie van de cursus ophalen
+
   - Om de lokale versie te updaten naar de laatste nieuwe versie (enkel nodig wanneer de online versie geüpdatet is):
     1. Navigeer naar de map waar de cursus staat:
     
@@ -28,6 +32,45 @@ Complete Web Backend Course (PHP)
        ````
        git pull
        ````
+
+## Je eigen oplossingen uploaden naar je eigen repository
+
+  - Wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
+
+  - Open de CLI en voer de volgende commands uit:
+
+    1. Navigeer naar de map waar je oplossingen staan
+       ````
+       cd \user\dropbox\web-backend\oplossingen
+       ````
+
+    2. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
+       ````
+       git status
+       ````
+
+    3. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
+       ````
+       git status
+       ````
+
+    4. Voeg de wijzigingen/toevoegingen/weglating toe aan je lokale repository 
+       ````
+       git add .
+       ````
+    De `.` staat voor de hele working directory
+
+    5. Finaliseer je wijzigingen door deze aan de repository toe te voegen. Voeg best ook een boodschap toe
+       ````
+       git commit -m "Oplossing toegevoegd"
+       ````
+    De `-m` staat voor "message". Je voegt best iedere keer een beschrijving toe van wat je in deze commit hebt uitgevoerd.
+
+    6. Voeg je lokale repository samen met de repository die online op je GitHub-account staat
+       ````
+       git push origin master
+       ````
+    De `origin` staat voor url van je GitHub oplossingen repository.
 
 ## License
 
