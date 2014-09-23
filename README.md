@@ -17,7 +17,7 @@ Complete Web Backend Course (PHP)
        ````
 
   - Stel een virtual host in met als url `web-backend.local` in het host bestand (zie slides virtual-server-setup.pdf)
-  
+
   - Stel in XAMPP (of andere virtual server) de virtual hosts zo in dat alle http://web-backend.local requests omgeleid worden naar de fysieke map waar de repository is gedownload (`\user\dropbox\web-backend\cursus`)
 
 ## Nieuwste versie van de cursus ophalen
@@ -34,9 +34,11 @@ Complete Web Backend Course (PHP)
        git pull
        ````
 
-## Je eigen oplossingen uploaden naar je eigen repository
+## Je eigen oplossingen uploaden naar je online repository
 
-  - Wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
+  - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten.
+
+  - Telkens Wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
 
   - Open de CLI en voer de volgende commands uit:
 
