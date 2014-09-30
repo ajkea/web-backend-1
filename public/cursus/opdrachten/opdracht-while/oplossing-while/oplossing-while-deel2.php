@@ -36,7 +36,7 @@
 					?>
 					<?php while( $product <= $maxProduct ):  ?>
 
-						<td class="<?= ( ( $tafel * $product ) % 2 > 0 ) ? 'oneven' : '' ?>"><?= $tafel * $product ?></td>
+						<td class="<?= ( ( $tafel * $product ) % 2 > 0 ) ? '' : 'oneven' ?>"><?= $tafel * $product ?></td>
 						<?php $product++ ?>
 					<?php endwhile ?>
 				</tr>
