@@ -1,8 +1,13 @@
 <?php
 
-	$getal1 = 5;
-	$getal2 = 10;
-	$getal3 = 2;
+	$origineelGetal1 = 5;
+	$origineelGetal2 = 10;
+	$origineelGetal3 = 2;
+
+	/*  Reset getallen naar originele waarden */
+	$getal1 = $origineelGetal1;
+	$getal2 = $origineelGetal2;
+	$getal3 = $origineelGetal3;
 	
 	$add 		= 	$getal1 + $getal2;
 	
@@ -13,6 +18,11 @@
 	$divide 	= 	$getal1 / $getal2;
 
 	$modulo		=	$getal2 % $getal3;
+
+	/*  Reset getallen naar originele waarden */
+	$getal1 = $origineelGetal1;
+	$getal2 = $origineelGetal2;
+	$getal3 = $origineelGetal3;
 
 	/*
 		Verschil tussen post & pre
@@ -28,13 +38,13 @@
 
 	$preIncrement 	= 	++$getal3;
 
-	$getal3			= 	2;	// reset getal om increments aan te tonen
+	$getal3 		= 	$origineelGetal3;	// reset getal om increments aan te tonen
 	$postIncrement 	= 	$getal3++;
 
-	$getal3			= 	2;	// reset getal om increments aan te tonen
+	$getal3 		= 	$origineelGetal3;	// reset getal om increments aan te tonen
 	$preDecrement 	= 	--$getal3;
 	
-	$getal3			= 	2;	// reset getal om increments aan te tonen
+	$getal3 		= 	$origineelGetal3;	// reset getal om increments aan te tonen
 	$postDecrement 	= 	$getal3--;
 ?>
 
@@ -56,9 +66,9 @@
 		<h1>Voorbeeld van arithmetic operators</h1>
 			
 		<section class="unit">
-			<p>getal 1: <?php echo $getal1 ?></p>
-			<p>getal 2: <?php echo $getal2 ?></p>
-			<p>getal 3: <?php echo $getal3 ?></p>
+			<p>getal 1: <?php echo $origineelGetal1 ?></p>
+			<p>getal 2: <?php echo $origineelGetal2 ?></p>
+			<p>getal 3: <?php echo $origineelGetal3 ?></p>
 		</section>
 
 		<p>optellen (g1 + g2): <?php echo $add ?></p>
