@@ -45,17 +45,17 @@
 		<pre><?php var_dump($fruit) ?></pre>
 
 		<h2>array_key_exists()</h2>
-		<p>Value voor array_key_exists( $fruit[ 0 ] ): <?= $arrayKeyExistsTest01 ?></p>
-		<p>Value voor array_key_exists( $fruit[ 2 ] ): <?= $arrayKeyExistsTest02 ?></p>	
+		<p>Value voor <code>array_key_exists( $fruit[ 0 ] )</code>: <?= $arrayKeyExistsTest01 ?></p>
+		<p>Value voor <code>array_key_exists( $fruit[ 2 ] )</code>: <?= $arrayKeyExistsTest02 ?></p>	
 			
 		<h2>isset()</h2>
-		<p>Value voor isset( $fruit[0] ): <?= $issetTest01 ?></p> 
-		<p>Value voor isset( $fruit[2] ): <?= $issetTest02 ?></p> 
+		<p>Value voor <code>isset( $fruit[0] )</code>: <?= $issetTest01 ?></p> 
+		<p>Value voor <code>isset( $fruit[2] )</code>: <?= $issetTest02 ?></p> 
 
 			
 		<h2>in_array()</h2>
-		<p>Value van in_array( 'banaan', $fruit ) : <?= in_array('banaan', $fruit) ?></p> 
-		<p>Value van in_array( 'peer', $fruit ): <?= in_array('peer', $fruit) ?></p>
+		<p>Value van <code>in_array( 'banaan', $fruit )</code> : <?= in_array('banaan', $fruit) ?></p> 
+		<p>Value van <code>in_array( 'peer', $fruit )</code>: <?= in_array('peer', $fruit) ?></p>
 			
 		
 		<h2>empty()</h2>
@@ -66,13 +66,13 @@
 			
 		<h2>$variableName</h2>
 
-		<p>$variableName value voor variable $groenten: <?= ( $groenten ? 'true': 'false' ) ?></p>
+		<p><code>$variableName</code> value voor variable <code>$groenten</code>: <?= ( $groenten ? 'true': 'false' ) ?></p>
 				
-		<p>!$variableName value voor variable $noten: <?= ( !$noten ? 'true': 'false' ) ?></p>
+		<p><code>!$variableName</code> value voor variable <code>$noten</code> (normaalgezien foutmelding omdat deze variabele niet bestaat.): <?= ( !$noten ? 'true': 'false' ) ?></p>
 
-		<p>$variableName value voor array $mandje: <?= ( $mandje ? 'true': 'false' ) ?></p>
+		<p><code>$variableName</code> value voor array <code>$mandje</code>: <?= ( $mandje ? 'true': 'false' ) ?></p>
 		
-		<p>!$variableName value voor array $mandje: <?= ( !$mandje ? 'true': 'false' ) ?></p>
+		<p><code>!$variableName</code> value voor array <code>$mandje</code>: <?= ( !$mandje ? 'true': 'false' ) ?></p>
 
 	</section>
 
