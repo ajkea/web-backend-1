@@ -9,8 +9,19 @@
 
    $getallenReverse     =  array_reverse( $getallen );
 
-   $somGetallenArrays   =  0;
+   /* Oneven getallen */
 
+   $getallenOneven;
+
+   foreach( $getallen as $value )
+   {
+      if ( $value % 2 != 0 )
+      {
+         $getallenOneven[]   =   $value;
+      }
+   }
+
+   /* Getallen met dezelfde key opgeteld */
    $getallenOpgeteld;
 
    foreach ($getallen as $key => $value)
@@ -49,7 +60,14 @@
          <?php endforeach ?>
       </ul>
 
-      <p>Som van de getallen uit array 1: <?= $getallenProduct ?></p>
+      <p>Product van de getallen uit array 1: <?= $getallenProduct ?></p>
+
+      <p>De oneven getallen: </p>
+      <ul>
+          <?php foreach ($getallenOneven as $key => $value): ?>
+            <li>[<?= $key ?>]: <?= $value ?></li>
+         <?php endforeach ?>
+      </ul>
 
       <p>De getallen van beide arrays met elkaar opgeteld: </p>
       <ul>
