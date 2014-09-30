@@ -1,9 +1,26 @@
 <?php
 
    // Eerste manier
-	$getallen =  array( 10, 20, 30, 40, 50, 7383838383 );
+	$getallen            =  array( 1, 2, 3, 4, 5 );
 
-   $arrayLengte   =  count ( $getallen );
+   $getallenProduct     =  array_product( $getallen );
+
+   $arrayLengte         =  count ( $getallen );
+
+   $getallenReverse     =  array_reverse( $getallen );
+
+   $somGetallenArrays   =  0;
+
+   $getallenOpgeteld;
+
+   foreach ($getallen as $key => $value)
+   {
+         /* Controleer of de key (index van de array) uit $getallen ook bestaat in $getallenReverse */
+      if ( isset( $getallenReverse[ $key ] ))
+      {
+         $getallenOpgeteld[ $key ]  =  $getallenReverse[ $key ] + $value;
+      }
+   }
     
 ?>
 
@@ -16,36 +33,30 @@
 
       <h1>Oplossing arrays basis: deel2</h1>
 
-      <p>Grootte van array: <?= $arrayLengte ?></p>
+      <p>Array 1</p>
 
       <ul>
-         
-         <?php 
-
-            /* 
-               Niet de meest ideale methode, aangezien er nu wel logica in de view wordt gebruikt,
-               maar wel de minst complexe gezien de kennis van PHP.
-               Beste oplossing: alles berekenen en de resultaten in een array steken en deze array uitloopen
-            */
-               
-            $teller  =  0;
-            $totaal  =  1;
-
-         ?>
-
-         <?php while( $teller < $arrayLengte ): ?>
-      
-            <?php $totaal *= $getallen[$teller] ?>
-
-            <li>
-               teller: <?= $teller ?>, waarde van array: <?= $getallen[$teller] ?>, totaal: <?= $totaal ?>
-               </li>
-
-            <?php ++$teller ?>
-
-         <?php endwhile ?>
+         <?php foreach ($getallen as $key => $value): ?>
+            <li>[<?= $key ?>]: <?= $value ?></li>
+         <?php endforeach ?>
       </ul>
-      
+
+      <p>Array 2 (reverse)</p>
+
+      <ul>
+         <?php foreach ($getallenReverse as $key => $value): ?>
+            <li>[<?= $key ?>]: <?= $value ?></li>
+         <?php endforeach ?>
+      </ul>
+
+      <p>Som van de getallen uit array 1: <?= $getallenProduct ?></p>
+
+      <p>De getallen van beide arrays met elkaar opgeteld: </p>
+      <ul>
+          <?php foreach ($getallenOpgeteld as $key => $value): ?>
+            <li>Som van values met key [<?= $key ?>]: <?= $value ?></li>
+         <?php endforeach ?>
+      </ul>
 
 	</body>
 </html>
