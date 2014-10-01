@@ -5,9 +5,9 @@ Complete Web Backend Course (PHP)
 
   - Maak een map web-backend aan met de volgende structuur:
 
-    web-backend (map)
+    ```web-backend (map)
     |- cursus (map)
-    |- oplossingen (map)
+    |- oplossingen (map)```
 
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
 
