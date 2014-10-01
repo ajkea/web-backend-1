@@ -31,11 +31,10 @@ Complete Web Backend Course (PHP)
   |- cursus (map)
   |- oplossingen (map)
   ```
-
-      - De map "cursus" bevat de web-backend repository
-
-      - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten.
-
+  
+    - De map "cursus" bevat de web-backend repository
+    - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten.
+    
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
 
     - http://web-backend.local -> verwijst naar de map web-backend/cursus
