@@ -26,11 +26,11 @@ Complete Web Backend Course (PHP)
 
   - De mappenstructuur web-backend moet er als volgt uitzien:
   
-  ```
-  web-backend (map)
-  |- cursus (map)
-  |- oplossingen (map)
-  ```
+    ```
+    web-backend (map)
+    |- cursus (map)
+    |- oplossingen (map)
+    ```
   
     - De map "cursus" bevat de web-backend repository
     - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten.
