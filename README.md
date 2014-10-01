@@ -5,14 +5,8 @@ Complete Web Backend Course (PHP)
 
 ### Mappenstructuur
   - Maak een map web-backend aan. de structuur zal er uiteindelijk als volgt moeten uitzien:
-  
-  ```
-  web-backend (map)
-  |- cursus (map) -> nog niet 
-  |- oplossingen (map)
-  ```
 
-  - Het is niet nodig om de map "cursus" nu al manueel aan te maken, dit gebeurt automatisch door GIT in de stap "GIT gebruiken om cursus te downloaden". Als je deze toevallig al had aangemaakt, verwijder deze dan
+  - Het is niet nodig om de map "cursus" nu al manueel aan te maken, dit gebeurt automatisch door GIT in de [volgende stap](https://github.com/pascalculator/web-backend#git-gebruiken-om-cursus-te-downloaden). Als je deze toevallig al had aangemaakt, verwijder deze dan.
 
 ### GIT gebruiken om cursus te downloaden
   - Download en installeer [GIT](http://git-scm.com/). Installeer de CLI-versie.
@@ -29,9 +23,21 @@ Complete Web Backend Course (PHP)
        ````
        git clone https://github.com/pascalculator/web-backend.git cursus
        ````
-       Opmerking: De bovenstaande command maakt automatisch een map "cursus" aan en plaats de web-backend repository hier in. Het is dus niet nodig om de map "cursus" manueel aan te maken. 
+       Opmerking: Door op het einde van deze command "cursus" toe te voegen, zal er automatisch een map "cursus" aangemaakt worden waarin de de web-backend repository wordt geplaatst. Het is dus niet nodig om de map "cursus" manueel aan te maken. 
 
 ### Virtual hosts
+
+  - De mappenstructuur web-backend moet er als volgt uitzien:
+  
+  ```
+  web-backend (map)
+  |- cursus (map) -> nog niet 
+  |- oplossingen (map)
+  ```
+    - De map "cursus" bevat de web-backend repository
+
+    - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten. Het is aan te raden om per opdracht een nieuwe map te maken.
+
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
 
     - http://web-backend.local -> verwijst naar de map web-backend/cursus
