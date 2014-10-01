@@ -87,3 +87,7 @@ Complete Web Backend Course (PHP)
 
   - Deze cursus wordt beheerd door [Pascal Nosenzo](mailto:info@pascalculator.be)
   - Alles uit deze cursus valt onder de [Apache Licence v2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Alles uit deze cursus mag vrij gebruikt worden, mits dezelfde disclaimer én bronvermelding worden overgenomen.
+
+## Contributors
+
+[Giele Cools](https://github.com/GieleCools)
