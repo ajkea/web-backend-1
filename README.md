@@ -3,18 +3,21 @@ Complete Web Backend Course (PHP)
 
 ## Installation
 
+### Mappenstructuur
   - Maak een map web-backend aan met de volgende structuur:
   ```web-backend (map)
   |- cursus (map)
   |- oplossingen (map)```
 
+### Virtual hosts
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
 
     - http://web-backend.local -> verwijst naar de map web-backend/cursus
     - http://oplossingen.web-backend.local -> verwijst naar de map web-backend/oplossingen
 
     - Deze virtual hosts moeten correct ingesteld worden, anders zullen sommige voorbeelden niet werken. Wijzig de benamingen dus niet.
-
+    
+### GIT gebruiken om cursus te downloaden
   - Als je virtual hosts correct ingesteld zijn, kan je [GIT](http://git-scm.com/) downloaden.
 
   - GIT gebruik je door middel van de [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
