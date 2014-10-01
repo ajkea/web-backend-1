@@ -4,13 +4,32 @@ Complete Web Backend Course (PHP)
 ## Installation
 
 ### Mappenstructuur
-  - Maak een map web-backend aan met de volgende structuur:
+  - Maak een map web-backend aan. de structuur zal er uiteindelijk als volgt moeten uitzien:
   
   ```
   web-backend (map)
-  |- cursus (map)
+  |- cursus (map) -> nog niet 
   |- oplossingen (map)
   ```
+
+  - Het is niet nodig om de map "cursus" nu al manueel aan te maken, dit gebeurt automatisch door GIT in de stap "GIT gebruiken om cursus te downloaden". Als je deze toevallig al had aangemaakt, verwijder deze dan
+
+### GIT gebruiken om cursus te downloaden
+  - Download en installeer [GIT](http://git-scm.com/). Installeer de CLI-versie.
+
+  - Open je [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
+
+    1. Navigeer naar de web-backend map:
+    
+       ````
+       cd \user\dropbox\web-backend
+       ````
+    2. Clone de web-backend repository:
+       
+       ````
+       git clone https://github.com/pascalculator/web-backend.git cursus
+       ````
+       Opmerking: De bovenstaande command maakt automatisch een map "cursus" aan en plaats de web-backend repository hier in. Het is dus niet nodig om de map "cursus" manueel aan te maken. 
 
 ### Virtual hosts
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
@@ -20,22 +39,6 @@ Complete Web Backend Course (PHP)
 
     - Deze virtual hosts moeten correct ingesteld worden, anders zullen sommige voorbeelden niet werken. Wijzig de benamingen dus niet.
     
-### GIT gebruiken om cursus te downloaden
-  - Als je virtual hosts correct ingesteld zijn, kan je [GIT](http://git-scm.com/) downloaden.
-
-  - GIT gebruik je door middel van de [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
-
-    1. Navigeer naar de cursus-map:
-    
-       ````
-       cd \user\dropbox\web-backend\cursus
-       ````
-    2. Clone de web-backend repository naar deze map:
-       
-       ````
-       git clone https://github.com/pascalculator/web-backend.git
-       ````
-
 
 
 ## Nieuwste versie van de cursus ophalen
