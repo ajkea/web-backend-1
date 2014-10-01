@@ -3,22 +3,35 @@ Complete Web Backend Course (PHP)
 
 ## Installation
 
-  - Download deze repository naar een map op jouw harde schijf door middel van de [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
+  - Maak een map web-backend aan met de volgende structuur:
 
-    1. Navigeer naar de map waar de cursus moet staan:
+    web-backend (map)
+    |- cursus (map)
+    |- oplossingen (map)
+
+  - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
+
+    - http://web-backend.local -> verwijst naar de map web-backend/cursus
+    - http://oplossingen.web-backend.local -> verwijst naar de map web-backend/oplossingen
+
+    - Deze virtual hosts moeten correct ingesteld worden, anders zullen sommige voorbeelden niet werken. Wijzig de benamingen dus niet.
+
+  - Als je virtual hosts correct ingesteld zijn, kan je [GIT](http://git-scm.com/) downloaden.
+
+  - GIT gebruik je door middel van de [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
+
+    1. Navigeer naar de cursus-map:
     
        ````
-       cd \user\dropbox\web-backend
+       cd \user\dropbox\web-backend\cursus
        ````
-    2. Clone de web-backend repository naar de map cursus:
+    2. Clone de web-backend repository naar deze map:
        
        ````
-       git clone https://github.com/pascalculator/web-backend.git cursus
+       git clone https://github.com/pascalculator/web-backend.git
        ````
 
-  - Stel een virtual host in met als url `web-backend.local` in het host bestand (zie slides virtual-server-setup.pdf)
 
-  - Stel in XAMPP (of andere virtual server) de virtual hosts zo in dat alle http://web-backend.local requests omgeleid worden naar de fysieke map waar de repository is gedownload (`\user\dropbox\web-backend\cursus`)
 
 ## Nieuwste versie van de cursus ophalen
 
