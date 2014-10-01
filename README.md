@@ -5,9 +5,12 @@ Complete Web Backend Course (PHP)
 
 ### Mappenstructuur
   - Maak een map web-backend aan met de volgende structuur:
-  ```web-backend (map)
+  
+  ```
+  web-backend (map)
   |- cursus (map)
-  |- oplossingen (map)```
+  |- oplossingen (map)
+  ```
 
 ### Virtual hosts
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
@@ -46,7 +49,7 @@ Complete Web Backend Course (PHP)
     2. Voer een pull-request uit:
        
        ````
-       git pull
+       git pull origin master
        ````
 
 ## Je eigen oplossingen uploaden naar je online repository
