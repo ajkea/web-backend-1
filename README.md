@@ -3,17 +3,14 @@ Complete Web Backend Course (PHP)
 
 ## Installation
 
-### Mappenstructuur
-  - Maak een map web-backend aan. de structuur zal er uiteindelijk als volgt moeten uitzien:
-
-  - Het is niet nodig om de map "cursus" nu al manueel aan te maken, dit gebeurt automatisch door GIT in de [volgende stap](https://github.com/pascalculator/web-backend#git-gebruiken-om-cursus-te-downloaden). Als je deze toevallig al had aangemaakt, verwijder deze dan.
-
 ### GIT gebruiken om cursus te downloaden
   - Download en installeer [GIT](http://git-scm.com/). Installeer de CLI-versie.
 
   - Open je [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
 
-    1. Navigeer naar de web-backend map:
+    1. Maak een map "web-backend" aan 
+
+    1. Navigeer naar de map "web-backend" via de CLI:
     
        ````
        cd \user\dropbox\web-backend
@@ -36,7 +33,7 @@ Complete Web Backend Course (PHP)
   ```
     - De map "cursus" bevat de web-backend repository
 
-    - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten. Het is aan te raden om per opdracht een nieuwe map te maken.
+    - De map "oplossingen" zal uiteindelijk je zelfgemaakte oplossingen bevatten.
 
   - Stel daarna je virtual hosts in (zie slides [Virtual Server Setup](https://github.com/pascalculator/web-backend/blob/master/public/cursus/virtual-server-setup.pdf)):
 
