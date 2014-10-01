@@ -6,9 +6,9 @@ Complete Web Backend Course (PHP)
 ### GIT gebruiken om cursus te downloaden
   - Download en installeer [GIT](http://git-scm.com/). Installeer de CLI-versie.
 
-  - Open je [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
+  - Maak een map "web-backend" aan 
 
-    1. Maak een map "web-backend" aan 
+  - Open je [CLI](http://en.wikipedia.org/wiki/Command-line_interface):
 
     1. Navigeer naar de map "web-backend" via de CLI:
     
