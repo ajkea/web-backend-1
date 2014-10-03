@@ -40,7 +40,7 @@ Complete Web Backend Course (PHP)
     - http://web-backend.local -> verwijst naar de map web-backend/cursus
     - http://oplossingen.web-backend.local -> verwijst naar de map web-backend/oplossingen
 
-    - Deze virtual hosts moeten correct ingesteld worden, anders zullen sommige voorbeelden niet werken. Wijzig de benamingen dus niet.
+    - Deze virtual hosts moeten correct ingesteld worden, anders zullen sommige voorbeelden niet werken. Neem alle virtual host en mapbenamingen dus exact over
     
 
 
