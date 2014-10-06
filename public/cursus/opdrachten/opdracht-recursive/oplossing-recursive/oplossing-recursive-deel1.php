@@ -1,7 +1,5 @@
 <?php
 
-	$dump = '';
-
 	function berekenKapitaal( $startKapitaal, $renteVoet, $aantalJaar )
 	{
 		static $teller 		= 	1;
