@@ -9,7 +9,7 @@
 
 		$totaal	=	$startKapitaal + $winst;
 
-		$arrayDump[] .= 'Na ' . $teller . ' jaar bedraagt het totaal bedrag ' . floor($totaal) . ' en is de winst voor dat jaar ' . floor($winst);
+		$arrayDump[] = 'Na ' . $teller . ' jaar bedraagt het totaal bedrag ' . floor($totaal) . ' en is de winst voor dat jaar ' . floor($winst);
 
 		if ($teller < $aantalJaar)
 		{
