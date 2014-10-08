@@ -14,7 +14,7 @@
 		if ($teller < $aantalJaar)
 		{
 			++$teller;
-			return berekenKapitaal( $totaal, $renteVoet, $aantalJaar );
+			berekenKapitaal( $totaal, $renteVoet, $aantalJaar );
 		}
 		
 		return $arrayDump;
