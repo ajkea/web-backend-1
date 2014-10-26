@@ -60,7 +60,8 @@ Complete Web Backend Course (PHP)
 
 ## Je eigen oplossingen uploaden naar je online repository
 
-  - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten en voer de voorgestelde bewerkingen uit.
+  - [Maak een GitHub repository](https://help.github.com/articles/create-a-repo) aan die je oplossing zal bevatten en voer de voorgestelde bewerkingen uit, bv:
+
 
   - Telkens wanneer je een oplossing hebt afgewerkt, kan je deze op je online repository zetten
 
@@ -70,11 +71,22 @@ Complete Web Backend Course (PHP)
        ````
        cd \user\dropbox\web-backend\oplossingen
        ````
+      
+      Je kan de onderstaande stappen volgen om je lokale versie te linken aan de online github-versie 
+      ````
+      git init
+      git add .
+      git commit -m "first commit"
+      git remote add origin URl-VAN-GITHUB-REPO
+      git push -u origin master
+      ````
 
     2. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
        ````
        git status
        ````
+       
+       
 
     3. Voeg de wijzigingen/toevoegingen/weglating toe aan je lokale repository 
        ````
