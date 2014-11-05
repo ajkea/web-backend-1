@@ -9,6 +9,7 @@
 </VirtualHost>
 
 * Voor mac gebruikers
+- http://jonathannicol.com/blog/2012/03/11/configuring-virtualhosts-in-xampp-on-mac/
 - httpd-vhost.conf bestand vind je vermoedelijk in /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 - Pas de volgende dingen aan in het /Applications/XAMPP/etc/httpd.conf bestand
     - zoek naar #Include /Applications/xampp/etc/extra/httpd-vhosts.conf
