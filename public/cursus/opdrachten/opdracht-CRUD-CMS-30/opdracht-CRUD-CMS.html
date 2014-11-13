@@ -80,16 +80,16 @@
 
                 <li>Bovenaan moet vermeld worden wie er is ingelogd. Doe dit op basis van het e-mailadres in de cookie</li>
 
-                <li>Artikels is een link die verwijst naar artikels-overzicht.php</li>
+                <li>Artikels is een link die verwijst naar artikel-overzicht.php</li>
             </ul>
 
-            <h1>Opdracht CRUD: CMS - Stap 1: artikels overzicht</h1>
+            <h1>Opdracht CRUD: CMS - Stap 2: artikels overzicht</h1>
 
             <ul>
                 <li>
-                    Maak de pagina artikels-overzicht.php aan. Deze ziet er als volgt uit:
+                    Maak de pagina artikel-overzicht.php aan. Deze ziet er als volgt uit:
 
-                    <div class="facade-minimal" data-url="http://www.app.local/artikels-overzicht.php">
+                    <div class="facade-minimal" data-url="http://www.app.local/artikel-overzicht.php">
                         
                         <p><a href="">Terug naar dashboard</a> | Ingelogd als test@test.be | <a href="">uitloggen</a></p>   
                         
@@ -106,10 +106,10 @@
 
                 <li>'Voeg een artikel toe' is een link die verwijst naar artikel-toevoegen-form.php</li>
 
-                <li>De functionaliteit van deze pagina, een overzicht van alle artikels, komt pas aan bod in stap 3, van zodra we artikels kunnen toevoegen.</li>
+                <li>De functionaliteit van deze pagina, een overzicht van alle artikels, komt pas aan bod in <a href="#stap-3">stap 3</a>, van zodra we artikels kunnen toevoegen.</li>
             </ul>
 
-            <h1>Opdracht CRUD: CMS - Stap 2: artikels toevoegen</h1>
+            <h1 id="">Opdracht CRUD: CMS - Stap 3: artikels toevoegen</h1>
 
             <ul>
                 <li>
@@ -170,17 +170,17 @@
 
                 <li>Wanneer er op 'Artikel toevoegen' wordt geklikt, moet er een artikel aan de database toegevoegd worden.</li>
 
-                <li>Wanneer het artikel succesvol aan de database werd toegevoegd, redirect dan naar de artikels-overzicht.php pagina en toon de gepaste boodschap (bv. "Het artikel werd succesvol toegevoegd")</li>
+                <li>Wanneer het artikel succesvol aan de database werd toegevoegd, redirect dan naar de artikel-overzicht.php pagina en toon de gepaste boodschap (bv. "Het artikel werd succesvol toegevoegd")</li>
 
                 <li>Wanneer het artikel niet toegevoegd kon worden, blijf dan op de huidige pagina en toon de gepaste boodschap (bv. "Het artikel kon niet toegevoegd worden."</li>
             </ul>
 
-            <h1>Opdracht CRUD: CMS - Stap 3: artikel overzicht uitbreiden</h1>
+            <h1>Opdracht CRUD: CMS - Stap 4: artikel overzicht uitbreiden</h1>
 
             <ul>
-                <li>Breid de pagina artikels-overzicht.php uit zodat er nu een overzicht wordt getoond van alle artikels die in de database zitten. Dat ziet er ongeveer als volgt uit:
+                <li>Breid de pagina artikel-overzicht.php uit zodat er nu een overzicht wordt getoond van alle artikels die in de database zitten. Dat ziet er ongeveer als volgt uit:
 
-                    <div class="facade-minimal" data-url="http://www.app.local/artikels-overzicht.php">
+                    <div class="facade-minimal" data-url="http://www.app.local/artikel-overzicht.php">
                         
                         <p><a href="">Terug naar dashboard</a> | Ingelogd als test@test.be | <a href="">uitloggen</a></p>   
                         
@@ -243,7 +243,7 @@
                         </ul>
                     </li>
 
-                    <li>De link 'artikel wijzigen' verwijst naar artikel-wijzigen-form.php (zie deel 4)
+                    <li>De link 'artikel wijzigen' verwijst naar artikel-wijzigen-form.php (zie <a href="#stap-5">stap 5</a>)
     
                         <ul>
                             <li>Deze link bevat een get-variabele met als key <code>artikel</code> en als value de primary key (=ID) van het artikel. Dat ziet er bv. als volgt uit: artikel-wijzigen-form.php?artikel=2</li>
@@ -279,7 +279,7 @@
                 </li>
             </ul>
 
-            <h1>Opdracht CRUD: CMS - Stap 4: artikel wijzigen</h1>
+            <h1 id="stap-5">Opdracht CRUD: CMS - Stap 5: artikel wijzigen</h1>
 
             <ul>
 
