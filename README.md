@@ -70,11 +70,20 @@ Complete Web Backend Course (PHP)
        ````
        cd \user\dropbox\web-backend\oplossingen
        ````
+      
+      Bij het aanmaken van je GitHub repository stelde GitHub een stappenplan voor dat je kon volgen om je lokale versie aan de online versie te koppelen. Is dit niet het geval, kan je de onderstaande stappen volgen.
+      ````
+      git init
+      git remote add origin URL-VAN-GITHUB-REPO
+      ````
+      De `remote add origin URL` staat voor een online versie van de GitHub repo linken aan een alias, in dit geval origin.
 
     2. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
        ````
        git status
        ````
+       
+       
 
     3. Voeg de wijzigingen/toevoegingen/weglating toe aan je lokale repository 
        ````
