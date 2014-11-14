@@ -15,13 +15,13 @@
 
 		<h1>Voorbeeld van classes: instance</h1>
 
-		<img src="../../_assets/img/adventure-time-logo.jpg" class="max-width">
+		<img src="http://web-backend.local/img/adventure-time-logo.jpg" class="max-width">
 
 		<h2>Personage: <?php echo $name ?></h2>
 
 		<p>Instantie aangemaakt van Finn, deze instantie is van het type "<?php echo $finnType ?>"</p>
 		
-		<img src="../../_assets/img/<?php echo $profilePicture ?>" class="max-width">
+		<img src="http://web-backend.local/img/<?php echo $profilePicture ?>" class="max-width">
 		
 		<p>[<?php echo $timestamp ?>] <?php echo $name ?>: "<?php echo $catchPhrase ?>"</p>
 
