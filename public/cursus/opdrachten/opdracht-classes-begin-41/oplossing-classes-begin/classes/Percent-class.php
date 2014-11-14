@@ -11,8 +11,8 @@
 		public function __construct( $new, $unit )
 		{
 			$this->absolute 			= 	$this->formatNumber( $new / $unit );
-			$this->relative 			= 	$this->formatNumber( $this->absolute -1 );
-			$this->hundred 				= 	$this->formatNumber( $this->relative * 100 );
+			$this->relative 			= 	$this->formatNumber( $this->absolute - 1 );
+			$this->hundred 				= 	$this->formatNumber( $this->absolute * 100 );
 
 			$this->nominal 				=	"status-quo";
 
