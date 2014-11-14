@@ -2,7 +2,7 @@
 
 	require_once 'Finn-class.php';
 
-	// Maak instantie van de klasse Timestamp
+	// Maak instantie van de klasse Finn
 	$finn = new Finn();
 
 	// Welk type is deze instantie? (puur voor demonstratieve doeleinden)

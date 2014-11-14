@@ -37,6 +37,8 @@
 		
         <h1>Php oefening 021 - deel2</h1>
 
+        <a href="phpoefening-021-deel1.php?session=destroy">Vernietig sessie</a>
+
         <h2>Registratiegegevens</h2>
 
         <ul>

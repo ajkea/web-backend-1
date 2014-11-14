@@ -28,6 +28,10 @@
 		
 		<h1>Php oefening 021 - deel3</h1>
 
+        <a href="phpoefening-021-deel1.php?session=destroy">Vernietig sessie</a>
+
+        <h2>Overzicht</h2>
+
         <ul>
 
         <?php foreach( $registrationData as $deelKey => $deelArray ):  ?>

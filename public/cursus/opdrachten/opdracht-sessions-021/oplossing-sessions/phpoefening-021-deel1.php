@@ -3,6 +3,15 @@
 
 	session_start();
 
+	if ( isset( $_GET['session'] ) )
+    {
+        if ( $_GET['session']  == 'destroy' )
+        {
+            session_destroy( );
+            header( 'location: phpoefening-021-deel1.php' );
+        }
+    }
+
 	var_dump( $_SESSION );
 
 	$email		=	( isset( $_SESSION[ 'registrationData' ][ 'deel1' ][ 'email'] ) ) ? $_SESSION[ 'registrationData' ][ 'deel1' ][ 'email'] : '';
@@ -21,6 +30,8 @@
 		
 		<h1>Php oefening 021 - deel1</h1>
 
+		<a href="phpoefening-021-deel1.php?session=destroy">Vernietig sessie</a>
+		
 		<h2>Deel1: registratiegegevens</h2>
 
 		<form action="phpoefening-021-deel2.php" method="POST">
