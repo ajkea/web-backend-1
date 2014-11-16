@@ -110,4 +110,4 @@ Complete Web Backend Course (PHP)
 
 ## Contributors
 
-[Giele Cools](https://github.com/GieleCools)
+[Giele Cools](https://github.com/GieleCools), [Sam Schuddinck](https://github.com/TheNumber4/)
