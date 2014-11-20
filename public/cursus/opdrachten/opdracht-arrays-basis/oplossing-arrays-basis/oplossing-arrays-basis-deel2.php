@@ -21,16 +21,14 @@
       }
    }
 
-   /* Getallen met dezelfde key opgeteld */
-   $getallenOpgeteld;
+   $somArray =  array();
 
-   foreach ($getallen as $key => $value)
+   foreach( $getallen as $key => $getal )
    {
-         /* Controleer of de key (index van de array) uit $getallen ook bestaat in $getallenReverse */
-      if ( isset( $getallenReverse[ $key ] ))
-      {
-         $getallenOpgeteld[ $key ]  =  $getallenReverse[ $key ] + $value;
-      }
+      $getal1  =  $getal;
+      $getal2  =  $getallenReverse[ $key ];
+
+      $somArray[] =  $getal1  + $getal2;
    }
     
 ?>
@@ -71,7 +69,7 @@
 
       <p>De getallen van beide arrays met elkaar opgeteld: </p>
       <ul>
-          <?php foreach ($getallenOpgeteld as $key => $value): ?>
+          <?php foreach ($somArray as $key => $value): ?>
             <li>Som van values met key [<?= $key ?>]: <?= $value ?></li>
          <?php endforeach ?>
       </ul>
