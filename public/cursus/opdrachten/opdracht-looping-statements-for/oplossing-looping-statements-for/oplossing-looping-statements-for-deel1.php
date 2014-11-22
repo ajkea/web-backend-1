@@ -1,29 +1,7 @@
 <?php
 
-	$getallen		=	array();
-	$aantalGetallen	=	100;
-
-	for ( $getal = 0; $getal < $aantalGetallen; ++$getal )
-	{
-		$getallen[]	=	$getal;
-	}
-
-	$getallenReeks	=	implode( ', ', $getallen );
-
-	/*
-
-	*/
-
-	$getallen2	=	array();
-	for ( $getal = 0; $getal < $aantalGetallen; ++$getal )
-	{
-		if ( $getal % 3 == 0 && $getal > 40 && $getal < 80 )
-		{
-			$getallen2[]	=	$getal;
-		}
-	}
-
-	$getallenReeks2	=	implode( ', ', $getallen2 );
+	$rijen		=	4;
+	$kolommen	=	10;
 ?>
 	
 
@@ -32,15 +10,33 @@
     <head>
         <meta charset="utf-8">
     	<title>Oplossing for: deel1</title>
+    	<style>
+			table
+			{
+				border-collapse:collapse;
+			}
+
+			td
+			{
+				padding: 16px;
+				border: 1px solid lightgrey;
+			}
+    	</style>
 
     </head>
     <body>
 		
 		<h1>Oplossing for: deel1</h1>
 
-		<p>Getallenreeks1: <?= $getallenReeks ?></p>
-
-		<p>Getallenreeks2: <?= $getallenReeks2 ?></p>
+		<table>
+			<?php for ( $rij = 0; $rij < $rijen; ++$rij): ?>
+				<tr>
+					<?php for ( $kolom = 0; $kolom < $kolommen; ++$kolom): ?>
+						<td>kolom</td>
+					<?php endfor ?>
+				</tr>
+			<?php endfor ?>
+		</table>
 
     </body>
 </html>
