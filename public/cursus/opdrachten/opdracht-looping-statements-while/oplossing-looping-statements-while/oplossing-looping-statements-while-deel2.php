@@ -1,8 +1,10 @@
 <?php
 
-	$maxTafels		=	10;
-	$maxProduct		=	10;
-
+	$boodschappenlijstje	=	array( "bananen",
+										"melk",
+										"vanille-ijs",
+										"chocola",
+										"cacao-poeder" );
 ?>
 	
 
@@ -11,39 +13,25 @@
     <head>
         <meta charset="utf-8">
     	<title>Oplossing while: deel2</title>
-		<style>
-			
-			.oneven
-			{
-				background-color	:	lightgreen;
-			}
-
-		</style>
     </head>
     <body>
 		
 		<h1>Oplossing while: deel2</h1>
 
-		<table>
+		<h2>Boodschappenlijstje voor Chocolate Banana Milkshake</h2>
+
+		<ul>
 			<?php 
-				$tafel 		= 	0;
+				$boodschapCounter 		= 	0;
 			?>
-			<?php while( $tafel < $maxTafels ):  ?>
+			<?php while( isset( $boodschappenlijstje [ $boodschapCounter ] ) ):  ?>
 				
-				<tr>
-					<?php 
-						$product = 	1;
-					?>
-					<?php while( $product <= $maxProduct ):  ?>
+				<li><?= $boodschappenlijstje [ $boodschapCounter ] ?></li>
+				
 
-						<td class="<?= ( ( $tafel * $product ) % 2 > 0 ) ? '' : 'oneven' ?>"><?= $tafel * $product ?></td>
-						<?php $product++ ?>
-					<?php endwhile ?>
-				</tr>
-
-				<?php $tafel++ ?>
+				<?php $boodschapCounter++ ?>
 			<?php endwhile ?>
-		</table>
+		</ul>
 
     </body>
 </html>
