@@ -21,7 +21,7 @@
 
 		<h2>Voorbeeld van require</h2>
 
-		<p><?php include 'require.txt' ?></p>
+		<p><?php require 'require.txt' ?></p>
 
 		<h2>Voorbeeld van include/require php-code</h2>
 
