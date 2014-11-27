@@ -1,13 +1,15 @@
 <?php
 
-    function test( $getal )
+    $getal  =   3;
+
+    function aftellen( $getal )
     {
         static $counter = 0;
         
         if ( $getal != 0 )
         {
-            echo 'ik zit in de if-lus en het getal is' . $getal . ' <br>';
-            test( --$getal );
+            echo 'ik zit in de if-lus en het getal is ' . $getal . ' <br>';
+            aftellen( --$getal );
         }
         else
         {
@@ -20,26 +22,33 @@
         var_dump( $counter );
     }
 
-    test( 3 );
 
 ?>
 
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Voorbeeld van recursie (simpel)</title>
-    <link rel="stylesheet" href="css/../../_assets/css/global.css">
+    <title>Voorbeeld van een recursieve functie (simpel)</title>
+    <link rel="stylesheet" type="text/css" href="http://web-backend.local/css/global.css">
+    <link rel="stylesheet" type="text/css" href="http://web-backend.local/css/directory.css">
+    <link rel="stylesheet" type="text/css" href="http://web-backend.local/css/facade.css">
 </head>
-<body>
-    
+
+<body class="web-backend-inleiding">
+
     <section class="body">
-        
-        <h1>Voorbeeld van recursie (simpel)</h1>
+
+        <h1>Voorbeeld van een recursieve functie (simpel)</h1>
+
+        <div>
+            <p>Het startgetal om af te tellen is <?= $getal ?></p>
+            <?php aftellen( $getal ) ?>
+        </div>
 
     </section>
-    
+
 </body>
 </html>

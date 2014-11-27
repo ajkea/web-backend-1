@@ -145,6 +145,7 @@
 			
 			<thead>
 				<tr>
+					<th>#</th>
 					<?php foreach ($brouwersFieldnames as $fieldname): ?>
 						<th><?= $fieldname ?></th>
 					<?php endforeach ?>
@@ -155,6 +156,9 @@
 			<tbody>
 				<?php foreach ($brouwers as $key => $brouwer): ?>
 					<tr class="<?= ( ($key+1)%2 == 0 ) ? 'even' : ''  ?> <?= ( $brouwer['brouwernr'] === $deleteId ) ? 'confirm-delete' : ''  ?>">
+						
+						<td><?= ++$key ?></td>
+
 						<?php foreach ($brouwer as $value): ?>
 							<td><?= $value ?></td>
 						<?php endforeach ?>
