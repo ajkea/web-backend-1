@@ -1,13 +1,13 @@
 <?php
 
 	namespace google\user\user;
-	use \google\user\userValidator\ as guuV;
+	use \google\user\userValidator as guuV;
 
 	class User
 	{
 		public function getUserIsValid()
 		{
-			$validator	=	new guuv\UserValidator();
+			$validator	=	new guuV\UserValidator();
 
 			$isValid	=	$validator->validate();
 
