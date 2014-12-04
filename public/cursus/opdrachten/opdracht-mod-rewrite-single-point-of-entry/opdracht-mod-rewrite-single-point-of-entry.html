@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Opdracht mod_rewrite: single point of entry</title>
+        <link rel="stylesheet" href="http://web-backend.local/css/global.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/facade.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/directory.css">
+    </head>
+    <body class="web-backend-opdracht">
+        
+        <section class="body">
+            
+            <h1>Opdracht mod_rewrite: single point of entry</h1>
+
+            <ul>
+                <li>Deze oefening is een theoretische herwerking van de CRUD opdracht tot één geheel.</li>
+
+                <li>
+                    De folderstructuur ziet er als volgt uit:
+
+                    <ul class="directory">
+                        <li class="folder">opdracht-mod-rewrite-single-point-of-entry
+                            <ul>
+                                <li class="folder">classes
+                                    <ul>
+                                        <li class="file">Bieren-class.php</li>
+                                    </ul>
+                                </li>
+                                <li class="file">.htaccess</li>
+                                <li class="file">index.php</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>De opdracht maakt gebruik van een 'single point of entry'. Dit wil zeggen dat de hele website maar één toegangspunt heeft, namelijk de index.php Dit stel je in dmv een .htaccess bestand
+  
+                <li class="tip">Zet in deze index.php een <code>var_dump()</code> van de <code>$_GET</code> variabele zodat je kan testen of de .htaccess zijn werkt doet. Later wordt dit aangepast.</li>
+
+            <h1>Opdracht mod_rewrite: single point of entry: deel 1: .htaccess</h1>
+
+            <ul>
+
+                <li>Op basis van de url (= verschillende <code>$_GET</code>-variabelen) worden er bepaalde klasses aangesproken</li>
+
+                <li>Dit kan enkel in samenspraak met een .htaccess bestand. Baseer je op het .htaccess bestand uit voorbeeld-mod-rewrite-get.
+                    
+                    <ul>
+                        <li>Geef elke url een nieuwe RewriteRule. Dit is niet de meest geschikte methode, maar voorlopig wel de simpelste (later zien we slechts met één rewriterule hetzelfde kunnen doen)</li>
+
+                        <li>Het .htaccess bestand moet de volgende clean urls kunnen omzetten:
+
+                            <ul>
+                                <li>http://www.app.local/bieren/overview/1/
+                                    
+                                    <ul>
+                                        <li>bieren is de waarde van de <code>$_GET</code> variabele <code>controller</code></li>
+                                        <li>De controller-waarde moet je hard coderen in de url</li>
+                                        <li>overview is de waarde van de get-variable <code>method</code></li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                        <li>1 is waarde van de <code>$_GET</code> variabele <code>id</code></li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    http://www.app.local/bieren/insert/
+
+                                    <ul>
+                                        <li>bieren is de waarde van de <code>$_GET</code> variabele <code>controller</code></li>
+                                        <li>De controller-waarde moet je hard coderen in de url</li>
+                                        <li>insert is de waarde van de get-variable <code>method</code></li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    http://www.app.local/bieren/delete/1/
+                                    <ul>
+                                        <li>bieren is de waarde van de <code>$_GET</code> variabele <code>controller</code></li>
+                                        <li>De controller-waarde moet je hard coderen in de url</li>
+                                        <li>insert is de waarde van de get-variable <code>method</code></li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                    </ul>
+                                    
+                                </li>
+
+                                <li>
+                                    http://www.app.local/bieren/update/1/
+                                    <ul>
+                                        <li>bieren is de waarde van de <code>$_GET</code> variabele <code>controller</code></li>
+                                        <li>De controller-waarde moet je hard coderen in de url</li>
+                                        <li>update is de waarde van de get-variable <code>method</code></li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                        <li>het getal 1 is de waarde van de <code>$_GET</code> variabele <code>id</code>. Dit getal kan variabel zijn</li>
+                                        <li>Deze value moet je opvangen met een group</li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+
+            <h1>Opdracht mod_rewrite: single point of entry: deel 1: index.php</h1>
+
+            <ul>
+                <li>Probeer naar alle url's te surfen en bekijk het resultaat van de <code>var_dump()</code>. Normaal zou je het volgende moeten krijgen
+                    
+                    <div class="facade-minimal" data-url="http://www.app.local/bieren/overview/1/">
+
+                        <pre>
+Array
+(
+    [controller] => bieren
+    [method] => overview
+    [id] => 1
+)
+                        </pre>
+                        
+                    </div>
+
+                    
+                    <div class="facade-minimal" data-url="http://www.app.local/bieren/insert/1/">
+
+                        <pre>
+Array
+(
+    [controller] => bieren
+    [method] => insert
+)
+                        </pre>
+                        
+                    </div>
+                    
+                    <div class="facade-minimal" data-url="http://www.app.local/bieren/delete/1/">
+
+                        <pre>
+Array
+(
+    [controller] => bieren
+    [method] => delete
+    [id] => 1
+)
+                        </pre>
+                        
+                    </div>
+                    
+                    <div class="facade-minimal" data-url="http://www.app.local/bieren/update/1/">
+
+                        <pre>
+Array
+(
+    [controller] => bieren
+    [method] => update
+    [id] => 1
+)
+                        </pre>
+                        
+                    </div>
+
+                </li>
+
+                <li>Als dit werkt, kan je in de index.php de nodige aanpassingen uitvoeren.</li>
+
+                <li>Maak in deze pagina een instantie van de klasse bieren mee en </li>
+            </ul>
+
+
+                <li>
+                    De klasse Bieren heeft minstens deze verschillende methodes:
+                    <ul>
+                        <li>overview</li>
+                        <li>insert</li>
+                        <li>delete</li>
+                        <li>update</li>
+                    </ul>
+                </li>
+            
+        </section>
+
+
+–   
+
+o   Je mag zelf kiezen hoe je een instantie van de Bieren klasse aanmaakt manueel (bv. Switch) of (betere optie) dynamisch via een instantie van de <code>$_GET</code> variabele
+
+   Controleer in de Bieren klasse welke methode er werd aangevraagd en voor de overeenstemmende methode uit.
+
+
+   Plaats in de elke methode een echo van de naam van de methode die werd aangesproken
+
+   Als je naar bv.  folder/bieren/overview/1/ surft en je ziet het woord ‘Overview’, wilt dit zeggen dat je klasse correct worden ingeladen, de methode correct wordt opgeroepen en je succesvol een single point of entry hebt aangemaakt.
+
+Uitbreiding
+
+–   Zorg ervoor dat je geen verschillende .htaccess rules meer moet schrijven. (moeilijkheid: +/-)
+o   Dit doe je door maar twee groepen te gebruiken in de rewriterule en niets meer hard te coderen. 
+   www.host.be/controller/value1/value1/value.../valueN
+•   controller is de eerste groep
+•   de string na controller is de tweede groep
+   De eerste groep staat in voor het dynamisch opvangen van de controller
+   De tweede groep staat voor alle mappen (=values) die erna komen
+•   Deze values geef je dan door aan de klasse, 
+•   Die explodeert deze string van de vorm ‘map/map/map/ op basis van de ‘/’ (de mappen separator)
+•   Controleert vervolgens welke values er uit de explode komen
+•   Handelt naargelang de waarde van de verschillende meegegeven mappen/het aantal van de meegegeven mappen
+
+–   Implementeer nu de code van de oefeningen 23, 24, 25, 26 en 27 in de juiste klasses. (moeilijkheid: +)
+
+o   Je mag volledig zelf kiezen hoe je dit doet.
+
+o   De beste methode is om zoveel mogelijk op te splitsen in deelmethodes
+   Aparte methode voor connectie met de database
+   Aparte methode voor het uitvoeren van de query
+   Aparte methode voor het returnen van de view
+   ...
+
+o   Zoals je zal merken, zullen er veel dingen hetzelfde zijn overheen de verschillende klasses (connectie met de database, uitvoeren van queries, ...).
+   Dit wil zeggen dat er veel dubbel/trippel/... werk wordt verricht en dat het onderhoud lastig wordt. Een goed MVC-model biedt hiervoor een oplossing. 
+
+    
+        
+    </body>
+</html>
