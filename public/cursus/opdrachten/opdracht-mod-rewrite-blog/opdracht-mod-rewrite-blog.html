@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Opdracht mod_rewrite: CRUD</title>
+        <link rel="stylesheet" href="http://web-backend.local/css/global.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/facade.css">
+        <link rel="stylesheet" href="http://web-backend.local/css/directory.css">
+    </head>
+    <body class="web-backend-opdracht">
+        
+        <section class="body">
+            
+            <h1>Opdracht mod_rewrite: CRUD</h1>
+
+            <ul>
+                <li></li> 
+            </ul>
+            
+        </section>
+        PHP Oefening 28:
+
+
+–   Werk in een aparte map: oefening028
+
+–   Maak een connectie met de lokale MySQL server
+
+–   Maak een database phpoefening028 aan met:
+o   Index (=primary key)
+o   Titel (=text)
+o   Artikel (=text)
+o   Kernwoorden (=text)
+o   Datum (= date)
+
+–   Maak een invulformulier (phpoefening028-artikel-toevoegen-form.php) aan waarbij je artikels kan toevoegen. 
+o   Het formulier heeft een action die verwijst naar: phpoefening028-artikel-toevoegen.php
+
+–   De toevoegen-pagina moet er als volgt uitzien
+
+ 
+
+
+o   Zorg ervoor dat de select dynamisch wordt opgebouwd. 
+   Werk met een functie. 
+   Deze functie moet je gebruiken om de dagen, maanden en jaren options op te bouwen. 
+   Zorg ervoor dat de volgorde waarin de getallen geoutput worden, automatisch bepaald wordt. (Dit is nodig voor de jaartallen, deze moeten van hoog naar laag geoutput worden.)
+
+   Uitbreiding: zorg ervoor dat het aantal nullen wordt toegevoegd bij eenheden en tientallen (zie bovenstaand voorbeeld), gebaseerd op het grootste getal.
+
+o   Wanneer je op verzenden klikt moet het artikel aan de database worden toegevoegd.
+
+o   Dit gebeurt door een aparte ‘verwerkingspagina’: phpoefening028-artikel-toevoegen.php
+
+   Let op: de datum moet worden samengesteld volgens de manier waarop SQL dit verwacht (jjjj-mm-dd)
+
+   Als de insert gelukt is, zet dan de boodschap ‘Het artikel is toegevoegd.’ in de $_SESSION[‘notification’]
+•   redirect daarna naar phpoefening028-artikel-overzicht.php
+
+•   vergeet je sessie niet te openen op de pagina’s waar nodig.
+
+•    Deze sessie-variabele moet op phpoefening028-artikel-overzicht.php (omschrijving volgt onderaan) getoond worden.
+
+•   Vlak nadat je deze getoond hebt, unset je deze $_SESSION[‘notification’] zodanig dat wanneer je op F5 drukt, deze boodschap niet meer verschijnt.
+
+   Als de insert niet gelukt is, zet dan de boodschap ‘Het artikel kon niet toegevoegd worden. Probeer opnieuw.’ in de $_SESSION[‘notification’]
+
+•   redirect daarna weer naar het formulier op phpoefening028-artikel-toevoegen-form.php
+
+•   vergeet je sessie niet te openen op de pagina’s waar nodig.
+
+•    Deze sessie-variabele moet op phpoefening028-artikel-overzicht.php (omschrijving volgt onderaan) getoond worden.
+
+•   Vlak nadat je deze getoond hebt, unset je deze $_SESSION[‘notification’] zodanig dat wanneer je op F5 drukt, deze boodschap niet meer verschijnt.
+
+
+   ‘Terug naar overzicht’ verwijst naar phpoefening028-artikel-overzicht.php
+
+ 
+
+o   Controlleer via phpMyAdmin of het toevoegen van de artikels gelukt is.
+
+
+–   Maak een pagina phpoefening028-artikel-overzicht.php aan. Deze moet er als volgt uitzien:
+
+ 
+
+
+o   ‘Voeg een artikel toe’ is een link die verwijst naar phpoefening028-artikel-toevoegen-form.php
+
+
+o   ‘Zoeken in artikels’ is een apart formulier met een action phpoefening028-artikel-zoeken.php.
+   De naam van het inputveld is query
+   De naam van de submit-knop is search-artikel
+   Opmerking: het is de bedoeling dat er enkel op één woord gezocht kan worden, niet op volledige zinnen.
+
+
+o   ‘Zoeken op datum’ is een apart formulier met een action phpoefening028-artikel-zoeken.php.
+   De naam van het inputveld is query
+   De naam van de submit-knop is search-artikel
+   De select is samengesteld met dezelfde functie die in phpoefening028-artikel-toevoegen-form.php wordt gebruikt.
+
+
+o   De artikels die onderaan getoond worden zijn alle artikels in de database.
+   Elk artikel is een list item. 
+   Hierzin zit een nieuwe lijst waarbij titel, artikel, kernwoorden en datum opnieuw list-items zijn (geneste list)
+
+–   Maak een pagina phpoefening028-artikel-zoeken.php aan
+
+o   Deze staat in voor het weergeven van de zoekresultaten.
+
+o   Wanneer er op een datum wordt gezocht, stel dan een WHERE-clause in op de datum kolom. 
+   Het volstaat om enkel te zoeken op het jaargetal
+
+ 
+
+o   Wanneer er op een woord wordt gezocht, stel dan een WHERE-clause in op de artikel kolom. 
+   Opmerkingen: er kan enkel gezocht worden in de ‘body’ van het artikel.
+ 
+
+o   Toon de resultaten op dezelfde manier als in phpoefening028-artikel-overzicht.php
+
+o   Wanneer er geen resultaat wordt gevonden, moet er een gepaste boodschap verschijnen.
+
+o   ‘Terug naar overzicht’ verwijst naar phpoefening028-artikel-overzicht.php
+
+–   Wanneer je alles aan de praat hebt gekregen, slaag de oefening dan op en kopieer alles naar de map oefening028-mod-rewrite
+
+DEEL2: URL-rewriting
+
+–   De bedoeling is nu om van elke pagina een cleane URL te maken (dus geen verwijzingen meer naar .php-bestanden, maar naar mappen)
+o   Dit doen we door middel van de mod_rewrite module van Apache
+
+–   Zorg ervoor dat wanneer je naar oefening028-mod-rewrite/artikels/ surft, je op phpoefening028-artikel-overzicht.php terecht komt.
+
+–   Zorg ervoor dat wanneer je naar oefening028-mod-rewrite/artikels/toevoegen/ surft, je op phpoefening028-artikel-toevoegen-form.php terecht komt
+
+–   Zorg ervoor dat wanneer je naar oefening028-mod-rewrite/artikels/toevoegen/confirm/ surft, je op phpoefening028-artikel-toevoegen.php terecht komt
+
+–   Zorg er nu voor dat alles werkt zoals het moet (de zoeken pagina even buiten beschouwing gelaten)
+o   Alle doorverwijzingen (url’s, a hrefs, ...) moeten verwijzen naar deze cleane urls (dus nergens een link naar een .php-bestand) 
+
+o   Hiervoor moet je gebruik maken van de absolute pathnaam bij verwijzingen naam andere pagina’s.
+   Deze kan je hard coderen ($basePath = ‘absolute pathname’)
+   Of (=beter): deze roep je op door middel van $_SERVER[‘REQUEST_URI’]
+•   Is dit de correcte pathname?
+•   Manipuleer deze pathname zodat je uitkomt op de gewenste absolute path-name 
+
+   Dit is een moeilijk en frustrerend werkje. Kijk goed naar de URL en analyseer wat er gebeurt.
+
+–   Tijd om de zoeken-pagina onder handen te nemen. De bedoeling is om de zoektermen ook friendly urls te geven.
+o   Wanneer er gezocht wordt op een woord ‘test’, moet de url er als volgt uitzien:
+oefening028-mod-rewrite/artikels/zoeken/query/test/
+
+o   Wanneer er gezocht wordt op een datum ‘2008’, moet de url er als volgt uitzien:
+oefening028-mod-rewrite/artikels/zoeken/datum/2008/
+
+o   Dit wil zeggen dat er een aparte pagina gemaakt moet worden, omdat het niet mogelijk is om via een get-formulier naar cleane url te surfen (enkel url met GET-variabelen).
+
+   Deze pagina heet phpoefening028-artikel-zoeken-redirect.php
+
+   Deze pagina staat in voor het interpreteren van de get-variabele.
+•   Wanneer deze search-artikel bevat (=naam van submit-knop bij zoeken op woord), moet de url oefening028-mod-rewrite/artikels/zoeken/query/ worden, gevolgd door het woord waarop gezocht moet worden
+
+•   Wanneer deze search-artikel bevat (=naam van submit-knop bij zoeken op woord), moet de url oefening028-mod-rewrite/artikels/zoeken/datum/ worden, gevolgd door de datum waarop gezocht moet worden
+
+   Ook deze pagina heeft een alias: oefening028-mod-rewrite/artikels/zoeken/
+•   Zorg er dus voor dat het inputformulier op de overzichtspagina ook naar deze cleane url verwijst.
+
+–   Test dit uitvoerig! Er zullen hier en daar nog enkele ‘gaten’ (wat gebeurt er als je zoek naar een lege string?, ...) ziten. Probeer deze zo goed mogelijk op te vangen.
+
+–   Superuitbreiding: zorg ervoor dat wanneer je naar 
+
+o   oefening028-mod-rewrite/artikels/zoeken/datum/2012/01/ surft je alle artikels van die maand uit dat jaar krijgt
+
+o   oefening028-mod-rewrite/artikels/zoeken/datum/2012/01/01/ surft je alle artikels van die specifieke dag krijgt. 
+
+o   Toon een boodschap wanneer er niets gevonden werd.
+
+
+
+
+
+
+
+        
+    </body>
+</html>
