@@ -110,4 +110,5 @@ Complete Web Backend Course (PHP)
 
 ## Contributors
 
-[Giele Cools](https://github.com/GieleCools), [Sam Schuddinck](https://github.com/TheNumber4/), [Jim Peeters](https://github.com/jimpeeters), [Stijn De Ridder](https://github.com/DeRidderStijn), [Ruud Luijten](https://github.com/rluijten/ ), [Kristof Van Aken](https://github.com/VanAkenKristof), [Jeroen Van den Broeck](https://www.github.com/jeroenjvdb)
+
+[Giele Cools](https://github.com/GieleCools), [Sam Schuddinck](https://github.com/TheNumber4/), [Jim Peeters](https://github.com/jimpeeters), [Stijn De Ridder](https://github.com/DeRidderStijn), [Ruud Luijten](https://github.com/rluijten/ ), [Jeroen Van den Broeck](https://www.github.com/jeroenjvdb)
