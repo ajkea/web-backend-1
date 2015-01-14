@@ -407,7 +407,7 @@
 
                 <li><span class="directory-sa-file">global.css</span> dit bevat de css van je pagina.</li>
 
-                    <li><span class="directory-sa-file">script.js</span> de inhoud van dit bestand is <code>console.log(‘dit werkt’);</code></li>
+                    <li><span class="directory-sa-file">script.js</span> de inhoud van dit bestand is <code>console.log( 'dit werkt' );</code></li>
 
                     <li><span class="directory-sa-file">HTMLBuilder-class.php</span> 
 
@@ -436,7 +436,7 @@
 
                                     <li>buildFooter
                                         <ul>
-                                            <li>zorgt ervoor dat de footer op het scherm verschijnt</li>
+                                            <li>Zorgt ervoor dat de footer op het scherm verschijnt</li>
                                             <li>Zorgt ervoor dat alle bestanden uit de <span class="directory-sa-folder">js</span>map automatisch worden ingeladen. Dus wanneer je een .js bestand verwijdert, mag dit niet in de footer verschijnen.</li>
                                         </ul>
                                     </li>
@@ -448,17 +448,88 @@
                     <li>
                         <span class="directory-sa-file">index.php</span>
                         <ul>
-                            <li>roept de autoload-functie aan die instaat voor het correct oproepen van de nodige klassen.</li>
+                            <li>roept de autoload-functie aan die instaat voor het  oproepen van de nodige klassen.</li>
                             <li>maakt een instantie aan van de klasse HTMLBuilder</li>
                             <li> Je mag zelf kiezen of je bij het aanmaken van deze instantie automatisch de pagina opbouwt of je hierbij gebruik maakt van het aanroepen van de specifieke build-methodes</li>
                         </ul>
                     </li>
 
+                    <li class="remark">Het is aan te raden om hier te stoppen en zelf uit te zoeken hoe je deze opdracht moet volbrengen. Werk zoveel mogelijk met methodes, zodat alles wat je in de klasse HTMLBuilder maakt, herbruikbaar is.</li>
+
+                    <li>Zorg ervoor dat je bij het aanmaken van een instantie van de klasse HTMLbuilder, de bestandsnaam van de header, body en footer kan meegeven. Dit kan via de <code>__construct()</code></li>
+
+                    <li>De methode <code>buildHeader()</code> laadt header.partial.html in en implementeert dynamisch de nodige elementen voor css (zie <code>buildCssLinks()</code>).</li>
+
+                    <li>De methode <code>buildBody()</code> laadt body.partial.html in.</li>
+
+                    <li>De methode <code>buildFooter()</code> laadt footer.partial.html in en implementeert denodige elementen voor js (zie <code>buildJsLinks()</code>).</li>
+
+                    <li>Maak een methode <code>findFiles()</code> met de parameters <code>$dir</code>en <code>$file</code>
+                        
+                        <ul>
+                            <li>Deze method returnt alle bestanden in de map waarvan je de extensie meegeeft als argument.</li>
+
+                            <li>Dus bv. <code>findFiles( '', 'js')</code> vindt alle .js bestanden in de map van deze oefening</li>
+
+                            <li>De method returnt alle gevonden bestanden in de vorm van een array</li>
+                        </ul>
+                    </li>
+
+                    <li>Maak een methode <code>buildJsLinks()</code> aan die enkel binnen de klasse aan te roepen is.
+                        
+                        <ul>
+                            <li>Deze method roept de <code>findFiles( directoryVanJsBestanden, 'js' )</code> aan.</li>
+
+                            <li class="remark">Dit is een methode binnen een klasse, maakt dus gebruik van speciale aanroeping!</li>
+
+                            <li>Deze method overloopt het resultaat van de <code>findFiles( 'js', '.js' ) </code> methode en plaatst deze daarna in de gepaste HTML-syntax. Best even opzoeken hoe je naar externe .js-files verwijst in HTML.</li>
+
+                            <li>Elke HTML-element met een link naar het .js bestand wordt in een array geplaatst.</li>
+
+                            <li>De methode returnt één string met alle gevonden .js-bestanden in het de correcte HTML syntax.</li>
+                        </ul>
+                    </li>
+
+                    <li>De methode buildCssLinks() doet exact hetzelfde als buildJsLinks, maar dan voor CSS elementen. Het enige verschil hier is de HTML die gebruikt wordt om CSS-files in te laden.</li>
+
+                    <li>Valideer het resultaat met de W3 validator</li>
+
                 </li> 
+            </ul>
+
+
+            <h1>Opdracht classes: portfolio: uitbreidingen</h1>
+
+            <ul>
+                <li>Zorg ervoor dat de <span class="directory-sa-file">index.php</span> pagina controleert welke get-variabele
+er geset is. Op basis van deze get-variabele wordt er een andere body ingeladen (bv. <code>$_GET['home']</code> => <span class="directory-sa-file">body.partial.html</span>, <cpde>$_GET['contact']</cpde> => <span class="directory-sa-file">contact.partial.html</span>)
+(moeilijkheid: +/-)
+                    <ul>
+                        <li>Mogelijke oplossing: werk met een klasse per pagina (<span class="directory-sa-file">Home-class.php</span> / <span class="directory-sa-file">Contact-class.php</span>, ...) die deze variabele invult.</li>
+                    </ul>
+
+                </li>
+
+                <li>Zorg ervoor dat je bepaalde variabelen kan meegeven aan deze buildmethodes zodat je bv. in de <span class="directory-sa-file">index.php</span> kan bepalen welke titel of welke header er moet meegegeven worden. (moeilijkheid: +/-)</li>
+
+                <li>Probeer alle javascript (of css)-bestanden samen te bundelen tot één bestand zodat er maar één JS of CSS-bestand meer wordt ingeladen (moeilijkheid: +/-)
+                    <ul>
+                        <li>Zorg ervoor dat de wanneer je nieuwe css of js files hebt die de oude overschrijven, de cache van de browser of provider niet de oude bestanden teruggeeft -> Zoek op wat cache-busting is en hoe je dit kan oplossen. Pas deze technieken toe op deze oefeningen (moeilijkheid: +)</li>
+
+                        <li>Zorg voor een klein stukje metadata aan het begin van je .css of .js bestand
+                            <ul>
+                                <li>Deze metadata staat in commentaar.</li>
+
+                                <li>Deze metadata bevat de namen van de bestanden die zijn samengevoegd, inclusief de grootte en de aanmaakdatum. (moeilijkheid: +/-)</li>
+
+                                <li>Zorg er nu voor dat er enkel een samengevoegde .css of .js wordt aangemaakt als de grootte en de aanmaakdatum van een van deze bestanden gewijzigd is. (moeilijkheid: +/-)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             
         </section>
-        
         
     </body>
 </html>
