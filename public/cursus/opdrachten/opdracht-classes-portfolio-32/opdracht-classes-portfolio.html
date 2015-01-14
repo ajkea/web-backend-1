@@ -405,6 +405,55 @@
                         </ul>
                     </li>
 
+                <li><span class="directory-sa-file">global.css</span> dit bevat de css van je pagina.</li>
+
+                    <li><span class="directory-sa-file">script.js</span> de inhoud van dit bestand is <code>console.log(‘dit werkt’);</code></li>
+
+                    <li><span class="directory-sa-file">HTMLBuilder-class.php</span> 
+
+                        <ul>
+                            <li>Deze bevat een klasse HTMLBuilder</li>
+
+                            <li>Voorzie een manier om de bestandsnamen van de header, body en footer mee te geveren (dmv constructor, dmv setters, ...)</li>
+
+                            <li> Deze bevat de publieke methodes buildHeader, buildFooter en buildBody
+                                <ul>
+                                    <li>buildHeader
+                                        <ul>
+                                            <li>zorgt ervoor dat de header op het scherm verschijnt</li>
+
+                                            <li>Zorg ervoor dat alle bestanden uit de <span class="directory-sa-folder">css</span> map automatisch worden ingeladen. Dus wanneer je een .css bestand verwijdert, mag dit niet in de header verschijnen.</li>
+                                            
+                                            <li></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>buildBody
+                                        <ul>
+                                            <li>zorgt ervoor dat de body op het scherm verschijnt</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>buildFooter
+                                        <ul>
+                                            <li>zorgt ervoor dat de footer op het scherm verschijnt</li>
+                                            <li>Zorgt ervoor dat alle bestanden uit de <span class="directory-sa-folder">js</span>map automatisch worden ingeladen. Dus wanneer je een .js bestand verwijdert, mag dit niet in de footer verschijnen.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="directory-sa-file">index.php</span>
+                        <ul>
+                            <li>roept de autoload-functie aan die instaat voor het correct oproepen van de nodige klassen.</li>
+                            <li>maakt een instantie aan van de klasse HTMLBuilder</li>
+                            <li> Je mag zelf kiezen of je bij het aanmaken van deze instantie automatisch de pagina opbouwt of je hierbij gebruik maakt van het aanroepen van de specifieke build-methodes</li>
+                        </ul>
+                    </li>
+
                 </li> 
             </ul>
             
