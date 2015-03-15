@@ -58,7 +58,7 @@
                             </ul>
                         </li>
 
-                        <li>Zorg ervoor dat wanneer er een paswoord gegenereerd wordt dit ook zichtbaar, dus geen ********, zal zijn voor gebruiker</li>
+                        <li>Zorg ervoor dat wanneer er een paswoord gegenereerd wordt dit ook zichtbaar is, dus geen ********, zal zijn voor gebruiker</li>
 
                         <li>Zorg ervoor dat het paswoord wordt teruggegeven aan de pagina registratie-form.php</li>
 
@@ -91,7 +91,7 @@
                             
                             <ul>
                                 
-                                <li>Als je dit manueel mag doen, mag dit. Het is voldoende om te controleren of het een ‘@’ en minstens één ‘.’ bevat. Best toch even zoeken, PHP heeft hiervoor speciale functies die veel manueel werk kunnen vermijden.</li>
+                                <li>Als je dit manueel kan doen, mag dit. Het is voldoende om te controleren of het een ‘@’ en minstens één ‘.’ bevat. Best toch even zoeken, PHP heeft hiervoor speciale functies die veel manueel werk kunnen vermijden.</li>
 
                                 <li>Als het e-mailadres niet geldig is, toon dan een gepaste boodschap dmv de <code>$_SESSION</code> en redirect weer naar registratie-form.php</li>
 
@@ -125,7 +125,7 @@
                         <li>Controleer alvorens de data toe te voegen of het e-mailadres reeds in de database users voorkomt.
                             
                             <ul>
-                                <li>Als de het e-mailadres reeds voorkomt, toon dan een gepaste boodschap dmv de <code>$_SESSION['notification']</code> en redirect naar registratie-form.php</li>
+                                <li>Als het e-mailadres reeds voorkomt, toon dan een gepaste boodschap dmv de <code>$_SESSION['notification']</code> en redirect naar registratie-form.php</li>
                             </ul>
                         </li>
 
@@ -152,7 +152,7 @@
                     </ul>
                 </li>
 
-                <li class="remark">Normaalgezien mag je niet zomaar iemand automatisch inloggen na registratie. Je moet wachten tot hij zijn account bevestigd heeft via een link die doorgestuurd werd naar het opgegeven e-mailadres. Zo ben je zeker dat de gebruiker is wie hij beweert te zijn. Je mag dit altijd proberen te implementeren, maar hoeft niet. Technisch is deze opdracht al veeleisend genoeg.</li>
+                <li class="remark">Normaal gezien mag je niet zomaar iemand automatisch inloggen na registratie. Je moet wachten tot hij zijn account bevestigd heeft via een link die doorgestuurd werd naar het opgegeven e-mailadres. Zo ben je zeker dat de gebruiker is wie hij beweert te zijn. Je mag dit altijd proberen te implementeren, maar hoeft niet. Technisch is deze opdracht al veeleisend genoeg.</li>
                 
             </ul>
 
@@ -242,7 +242,7 @@
                             </ul>
                         </li>
 
-                        <li>Haal de salt op uit de database zoals bij het de pagina registratie-process.php</li>
+                        <li>Haal de salt op uit de database zoals bij de pagina registratie-process.php</li>
 
                         <li> Controlleer of de hash van het (ingevulde paswoord + salt), gelijk is aan de password-kolom uit de database</li>
 
