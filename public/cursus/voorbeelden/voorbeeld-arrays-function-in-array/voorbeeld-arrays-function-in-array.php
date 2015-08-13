@@ -2,8 +2,9 @@
 	$autos 				= 	array( 'Volvo', 'Porsche', 'Honda' );
 	$opTeZoekenAuto 	= 	'Ford';
 	
+	$autoGevonden 	=	in_array( $opTeZoekenAuto, $autos );
 	
-	if( in_array( $opTeZoekenAuto, $autos ) ) 
+	if( $autoGevonden ) 
 	{
 		$resultaat = $opTeZoekenAuto . ' is gevonden in de lijst van auto\'s!';
 	}
