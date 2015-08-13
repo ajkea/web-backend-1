@@ -6,6 +6,8 @@
 
 	$getallenUniqueGesorteerd	=	$getallenUnique;
 
+	// Let op: rsort neemt de array die het sorteert by reference, wat wil zeggen dat de originele array aangepast zal worden.
+	// Als het sorteren gelukt is, returnt deze functie enkel TRUE of FALSE als het niet gelukt is
 	rsort( $getallenUniqueGesorteerd );
 
 
