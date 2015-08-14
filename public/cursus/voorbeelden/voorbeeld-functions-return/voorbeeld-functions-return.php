@@ -26,7 +26,46 @@
 			return false;
 		}
 	}
+
+	/*
+		function isLeapYear( $year ) 
+		{
+		
+			$year = (int) $year;
+
+			$result	=	'';
+			
+			if ( ( $year  % 4 ) == 0) 
+			{
+				if( ( $year % 100 ) == 0) 
+				{
+					if( ( $year ) % 400 == 0 ) 
+					{
+						$result = true;
+					}
+					else 
+					{
+						$result = false;
+					}
+				}
+				else 
+				{
+					$result = true;
+				}
+			}
+			else 
+			{
+				$result = false,
+			}
+
+			return $result
+		}
+	*/
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
