@@ -35,7 +35,6 @@
 		$leegWinkelmandje = false;
 	}
 
-
 ?>
 
 <!doctype html>
@@ -84,10 +83,10 @@
 					<h2>Winkelrek</h2>
 					<p>Klik op een product om het aan het winkelmandje toe te voegen</p>
 					<ul>
-						<li><a href="?product=tros-bananen">Tros bananen</a></li>
-						<li><a href="?product=appelsienen">Appelsienen</a></li>
-						<li><a href="?product=koffie">Koffie</a></li>
-						<li><a href="?product=melk">Melk</a></li>
+						<li><a href="voorbeeld-session.php?product=tros-bananen">Tros bananen</a></li>
+						<li><a href="voorbeeld-session.php?product=appelsienen">Appelsienen</a></li>
+						<li><a href="voorbeeld-session.php?product=koffie">Koffie</a></li>
+						<li><a href="voorbeeld-session.php?product=melk">Melk</a></li>
 					</ul>
 				</section>
 				
