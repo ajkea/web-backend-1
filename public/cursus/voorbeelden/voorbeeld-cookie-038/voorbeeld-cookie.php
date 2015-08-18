@@ -10,6 +10,7 @@
 	
 		if ($_GET['cookie'] == 'delete') {
 		
+			// Niet 100% veilig, maar voldoende voor nu. Zie slides voor extra uitleg
 			setcookie('authenticated','', time() - 3600 );
 			
 			header('location: voorbeeld-cookie.php');
@@ -62,7 +63,7 @@
 			
 			<?php if ( $isAuthenticated ):	?>
 				<p>U bent ingelogd.</p>
-				<p><a href="?cookie=delete">Uitloggen</a></p>
+				<p><a href="voorbeeld-cookie.php?cookie=delete">Uitloggen</a></p>
 			<?php else: ?>
 				<?php if ( $message ): ?>
 					<p><?php echo $message ?></p>
