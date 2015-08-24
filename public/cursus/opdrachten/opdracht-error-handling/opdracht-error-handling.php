@@ -99,7 +99,7 @@
 
                 <li>Voeg deze string toe aan het einde van de <span class="directory-sa-file">log.txt</span></li>
 
-                <li>Probeer elke log-regel op een nieuwe lijn te krijgen. Dit kan je doen door op het einde van elke regel de volgende karakters toe te voegen: <code>\n\r</code>. Dit betekent new line of return, de code voor een enter dus. Deze zijn verschillend voor Mac (<code>\n</code>) & Win (<code>\r</code>), vandaar de twee codes.</li>
+                <li>Probeer elke log-regel op een nieuwe lijn te krijgen. Dit kan je doen door op het einde van elke regel de volgende karakters toe te voegen: <code>\n\r</code>. Dit betekent new line of return, de code voor een enter dus. Deze zijn verschillend voor Mac (<code>\n</code>) & Win (<code>\r</code>), vandaar de twee codes. Deze codes moeten kerkwaardig genoeg ook tussen double quotes<code>""</code> en werken niet wanneer ze met single quotes <code>''</code> worden aangeduid</li>
             </ul>
 
             <h1>Controle op kortingscode</h1>
