@@ -75,14 +75,14 @@
 			<?php endforeach ?>
 		</ul>
 
-		<h2>fetch row van resultaat</h2>
+		<h2>fetch row (= fetch_array() ) van resultaat</h2>
 		<ul>
 			<?php foreach ($fetchRow as $row): ?>
 				<li><?php echo $row[1] ?>: <?php echo $row[4] ?> promille</li>
 			<?php endforeach ?>
 		</ul>
 
-		<h2>fetch both (= fetch_array() ) van resultaat</h2>
+		<h2>fetch both van resultaat</h2>
 		<ul>
 			<?php foreach ($fetchBoth as $row): ?>
 				<li><?php echo $row['naam'] ?>: <?php echo $row['4'] ?> promille</li>

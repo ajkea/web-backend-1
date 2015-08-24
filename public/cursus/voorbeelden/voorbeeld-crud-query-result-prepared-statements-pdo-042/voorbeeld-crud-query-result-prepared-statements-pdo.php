@@ -7,7 +7,7 @@
 		$db = new PDO('mysql:host=localhost;dbname=bieren', 'root', 'root', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // Connectie maken
 
 		// In dit geval een query uitvoeren
-		$alcoholPercentage 	=	7;
+		$alcoholPercentage 	=	'TRUE';
 
 		// Een query klaarmaken. 
 		$queryString = 'SELECT bieren.naam, bieren.alcohol 
@@ -81,14 +81,14 @@
 			<?php endforeach ?>
 		</ul>
 
-		<h2>fetch row van resultaat</h2>
+		<h2>fetch row (= fetch_array() ) van resultaat</h2>
 		<ul>
 			<?php foreach ($fetchRow as $row): ?>
 				<li><?php echo $row[0] ?>: <?php echo $row[1] ?> promille</li>
 			<?php endforeach ?>
 		</ul>
 
-		<h2>fetch both (= fetch_array() ) van resultaat</h2>
+		<h2>fetch both van resultaat</h2>
 		<ul>
 			<?php foreach ($fetchBoth as $row): ?>
 				<li><?php echo $row['naam'] ?>: <?php echo $row['1'] ?> promille</li>
