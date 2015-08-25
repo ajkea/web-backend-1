@@ -42,12 +42,12 @@
 
 			$statement = $db->prepare( $updateQuery );
 			
-			$statement->bindParam( ":brouwernr",  $_POST[ 'brouwernr' ] );						
-			$statement->bindParam( ":brnaam",  $_POST[ 'brnaam' ] );						
-			$statement->bindParam( ":adres",  $_POST[ 'adres' ] );						
-			$statement->bindParam( ":postcode",  $_POST[ 'postcode' ] );						
-			$statement->bindParam( ":gemeente",  $_POST[ 'gemeente' ] );						
-			$statement->bindParam( ":omzet",  $_POST[ 'omzet' ] );
+			$statement->bindValue( ":brouwernr",  $_POST[ 'brouwernr' ] );						
+			$statement->bindValue( ":brnaam",  $_POST[ 'brnaam' ] );						
+			$statement->bindValue( ":adres",  $_POST[ 'adres' ] );						
+			$statement->bindValue( ":postcode",  $_POST[ 'postcode' ] );						
+			$statement->bindValue( ":gemeente",  $_POST[ 'gemeente' ] );						
+			$statement->bindValue( ":omzet",  $_POST[ 'omzet' ] );
 
 			$updateSuccessful	=	$statement->execute();
 
@@ -71,7 +71,7 @@
 
 			$deleteStatement = $db->prepare( $deleteQuery );
 
-			$deleteStatement->bindParam( ':brouwernr', $_POST['delete'] );
+			$deleteStatement->bindValue( ':brouwernr', $_POST['delete'] );
 
 			$isDeleted 	=	$deleteStatement->execute();
 
@@ -107,7 +107,7 @@
 		{
 			foreach ( $tokens as $token => $tokenValue )
 			{
-				$statement->bindParam( $token, $tokenValue );
+				$statement->bindValue( $token, $tokenValue );
 			}
 		}
 

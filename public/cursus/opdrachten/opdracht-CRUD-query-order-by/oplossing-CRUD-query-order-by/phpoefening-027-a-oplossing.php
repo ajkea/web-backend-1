@@ -61,7 +61,7 @@
 		{
 			foreach ( $tokens as $token => $tokenValue )
 			{
-				$statement->bindParam( $token, $tokenValue );
+				$statement->bindValue( $token, $tokenValue );
 			}
 		}
 

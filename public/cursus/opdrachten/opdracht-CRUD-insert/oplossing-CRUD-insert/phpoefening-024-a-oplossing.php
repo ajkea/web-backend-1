@@ -16,11 +16,11 @@
 
 			$brouwerStatement = $db->prepare( $brouwerQueryString );
 
-			$brouwerStatement->bindParam( ':brnaam', $_POST[ 'brnaam' ] );
-			$brouwerStatement->bindParam( ':adres', $_POST[ 'adres' ] );
-			$brouwerStatement->bindParam( ':postcode', $_POST[ 'postcode' ] );
-			$brouwerStatement->bindParam( ':gemeente', $_POST[ 'gemeente' ] );
-			$brouwerStatement->bindParam( ':omzet', $_POST[ 'omzet' ] );
+			$brouwerStatement->bindValue( ':brnaam', $_POST[ 'brnaam' ] );
+			$brouwerStatement->bindValue( ':adres', $_POST[ 'adres' ] );
+			$brouwerStatement->bindValue( ':postcode', $_POST[ 'postcode' ] );
+			$brouwerStatement->bindValue( ':gemeente', $_POST[ 'gemeente' ] );
+			$brouwerStatement->bindValue( ':omzet', $_POST[ 'omzet' ] );
 
 			$isAdded = $brouwerStatement->execute();
 

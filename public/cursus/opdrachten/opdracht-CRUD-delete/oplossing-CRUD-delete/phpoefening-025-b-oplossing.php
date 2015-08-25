@@ -21,7 +21,7 @@
 
 			$deleteStatement = $db->prepare( $deleteQuery );
 
-			$deleteStatement->bindParam( ':brouwernr', $_POST['delete'] );
+			$deleteStatement->bindValue( ':brouwernr', $_POST['delete'] );
 
 			$isDeleted 	=	$deleteStatement->execute();
 
