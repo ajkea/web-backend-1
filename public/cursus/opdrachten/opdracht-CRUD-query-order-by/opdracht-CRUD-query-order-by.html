@@ -200,6 +200,9 @@
 
                             </div>
                         </li>
+
+                        <li class="remark">Na een <code>ORDER BY</code> statement is het niet mogelijk om met placeholders te werken, maar moet je deze concateneren in de query string: <code>'SELECT * FROM bieren ORDER BY ' . $kolomnaam . ' ' . $order</code>. Dit is bizar, maar moet zo anders zal de query niet correct uitgevoerd worden. Dit is enkel van toepassing voor de <code>ORDER BY</code> waarden, voor al de rest gelden de conventies zoals gezien.</li>
+
                         <li><span class="tip">Als je voldoende zelfzeker bent, mag je deze oplossing zelfstandig proberen op te lossen. Anders kan je gewoon het onderstaande stappenplan volgen.</span></li>
                     </ul>
                 </li>
