@@ -81,8 +81,8 @@
                             <ul>
                                 <li>id (Primary key)</li>
                                 <li>email (varchar)</li>
-                                <li>salt (varchar)</li>
-                                <li>hashed_password (varchar)</li>
+                                <li>salt (varchar, 255 karakters)</li>
+                                <li>hashed_password (varchar, 255 karakters)</li>
                                 <li>last_login_time (date)</li>
                             </ul>
                         </li>
@@ -135,7 +135,7 @@
 
                                 <li>SHA512-hash dit salted password</li>
 
-                                <li>Voeg het e-mailadres, de willekeurig gegenereerde salt en het salted password toe aan de database onder de tabel users. Zorg ervoor dat <code>last_login_time</code> ook geüpdated wordt dmv de SQL-command <code>NOW()</code></li>
+                                <li>Voeg het e-mailadres, de willekeurig gegenereerde salt en het hashed salted password toe aan de database onder de tabel users. Zorg ervoor dat <code>last_login_time</code> ook geüpdated wordt dmv de SQL-command <code>NOW()</code></li>
                             </ul>
                         </li>
 
