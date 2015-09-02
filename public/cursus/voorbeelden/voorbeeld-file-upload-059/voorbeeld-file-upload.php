@@ -41,7 +41,7 @@ try
 					$message[ 'type' ]		= 'success';
 					$message['text'][ 'upload' ]	=	$_FILES["file"]["name"];
 					$message['text'][ 'type' ]		=	$_FILES["file"]["type"];
-					$message['text'][ 'size' ]		=	( $_FILES["file"]["size"] / 1024 ) . 'Mb';
+					$message['text'][ 'size' ]		=	( $_FILES["file"]["size"] / 1024 ) . 'kb';
 					$message['text'][ 'tmp_filename' ]	=	 $_FILES["file"]["tmp_name"];
 					$message['text'][ 'opgeslagen_in' ]	=	ROOT . "/img/" . $_FILES["file"]["name"];
 				}
