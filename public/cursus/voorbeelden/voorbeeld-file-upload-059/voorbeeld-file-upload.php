@@ -38,12 +38,12 @@ try
 					// Anders mag het bestand geüpload worden naar de map
 					move_uploaded_file($_FILES["file"]["tmp_name"], (ROOT . "/img/" . $_FILES["file"]["name"]));
 					
-					$message[ 'type' ]	=	'success';
-					$message[ 'text' ]	=	'<p>Upload: ' . $_FILES["file"]["name"] .'</p>';
-					$message[ 'text' ]	=	'<p>Type: ' . $_FILES["file"]["type"] .'</p>';
-					$message[ 'text' ]	=	'<p>Size: ' . $_FILES["file"]["size"] / 1024 .'</p>';
-					$message[ 'text' ]	=	'<p>Temp file: ' . $_FILES["file"]["tmp_name"] .'</p>';
-					$message[ 'text' ]	=	'<p>Opgeslagen in: : ' . ROOT . "/img/" . $_FILES["file"]["name"] .'</p>';
+					$message[ 'type' ]		= 'success';
+					$message['text'][ 'upload' ]	=	$_FILES["file"]["name"];
+					$message['text'][ 'type' ]		=	$_FILES["file"]["type"];
+					$message['text'][ 'size' ]		=	( $_FILES["file"]["size"] / 1024 ) . 'Mb';
+					$message['text'][ 'tmp_filename' ]	=	 $_FILES["file"]["tmp_name"];
+					$message['text'][ 'opgeslagen_in' ]	=	ROOT . "/img/" . $_FILES["file"]["name"];
 				}
 			}
 		} 
@@ -79,7 +79,13 @@ catch( Exception $e )
 		<h1>Voorbeeld file upload</h1>
 
 		<?php if ( $message ): ?>
-			<div class="modal <?= $message[ 'type' ] ?>"><?= $message[ 'text' ] ?></div>
+			<div class="modal <?= $message[ 'type' ] ?>">
+				<ul>
+					<?php foreach ($message['text'] as $name => $value): ?>
+						<li><?= $name ?>: <?= $value ?></li>
+					<?php endforeach ?>
+				</ul>
+			</div>
 		<?php endif ?>
 
 		<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
