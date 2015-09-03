@@ -159,13 +159,21 @@
             <h1>Opdracht security: stap 2 -  dashboard</h1>
 
             <ul>
-                <li>Controleer of de cookie met key <code>login</code> geset is. Als deze niet geset is moet er automatisch geredirect worden naar login-form.php (<a href="#login">zie stap 4</a>)</li>
+                <li>Controleer of de cookie met key <code>login</code> geset is. Als deze niet geset is moet er automatisch geredirect worden naar login-form.php (<a href="#login">zie stap 4</a>) waar de boodschap "u moet eerst inloggen" wordt getoond.</li>
 
-                <li>Haal de juiste salt op uit de database users-tabel</li>
+                <li>Zorg er nu voor dat je de value van de cookie, die normaal de e-mail van de gebruiker en de gehashte versie van het gesalte e-mail adres individueel kan aanspreken
+                    <ul>
+                        <li>Je hebt beide waarden aan elkaar geplakt door middel van een delimiter, een scheidingsteken. Gebruik nu dit scheidingsteken om een <code>explode()</code> uit te voeren.</li>
 
-                <li>Controleer of het de hash van het e-mailadres geconcateneerd met de salt uit de database gelijk is aan de hash-key na de komma uit de cookie.</li>
+                        <li>Nu zou je een array moeten hebben met op de <code>[ 0 ]</code> key het e-mail adres en op de <code>[ 1 ]</code> key de hash van het gesalte e-mailadres</li>
+                    </ul>
+                </li>
 
-                <li>Als dit het geval is, mag de inhoud van het dashboard getoond worden, anders moet de cookie <code>unset</code> worden en moet er geredirect worden naar de login pagina.</li>
+                <li>Haal nu op basis van het e-mailadres uit de cookie de salt die bij dit e-mailadres hoort op uit de database users-tabel</li>
+
+                <li>Controleer of het de hash van het e-mailadres geconcateneerd met de salt uit de database gelijk is aan de hash die je uit de cookie hebt gehaald.</li>
+
+                <li>Als dit het geval is, is de gebruiker correct gevalideerd en mag de inhoud van het dashboard getoond worden, anders moet de cookie <code>unset()</code> worden, dit duidt immers op een cookie waar mogelijk mee geknoeid is, en moet er geredirect worden naar de login pagina.</li>
 
                 <li>Het dashboard ziet er als volgt uit
                      <div class="facade-minimal" data-url="http://www.app.local/dashboard.php">
