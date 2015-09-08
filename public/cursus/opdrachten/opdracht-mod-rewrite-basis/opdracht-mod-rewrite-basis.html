@@ -24,7 +24,7 @@
                 <li>Maak per deel een nieuwe map en een nieuwe .htaccess aan (!)</li>
             </ul>
 
-            <h1>Opdracht mod_rewrite: deel1: rewriterule met file</h1>
+            <h1>Opdracht mod_rewrite: deel 1: rewriterule met file</h1>
 
             <ul>
                 <li>Zorg er voor dat wanneer je naar http://www.app.local/original.php surft, je niet de inhoud van http://www.app.local/original.php laat zien, maar de inhoud van redirect.php De url moet wel http://www.app.local/original.php blijven.
@@ -34,6 +34,8 @@
                         <h1>Het redirect bestand</h1>
 
                     </div>
+
+                dus, http://www.domein.be/original.php toont http://www.domein.be/redirect.php 
                 </li>
 
                 <li>
@@ -44,12 +46,14 @@
                         <h1>Het originele bestand</h1>
 
                     </div>
+
+                    dus, http://www.domein.be/ toont http://www.domein.be/original.php 
                 </li>
 
                 <li class="Extension">Zorg ervoor dat je kan loggen wat er precies gebeurt (goed voor debugging).</li>
             </ul>
 
-            <h1>Opdracht mod_rewrite: deel2: rewriterule op basis van GET-variabele</h1>
+            <h1>Opdracht mod_rewrite: deel 2: rewriterule op basis van GET-variabele</h1>
 
             <ul>
                 <li>Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?user=rasmus</li>
@@ -71,11 +75,11 @@ Array
                         </pre>
 
                     </div>
-
+                dus, http://www.domein.be/rasmus/ verwijst naar index.php?user=rasmus 
                 </li>
             </ul>
 
-            <h1>Opdracht mod_rewrite: deel3: rewriterule op basis van GET-variabele (dynamisch)</h1>
+            <h1>Opdracht mod_rewrite: deel 3: rewriterule op basis van GET-variabele (dynamisch)</h1>
 
                 <ul>
                     <li>Zorg er nu voor dat wanneer je naar http://www.app.local/steve/  surft (of eender welke andere mapnaam) ook deze mapnaam als value wordt ingevuld in de user-variabele.</li>
@@ -94,11 +98,11 @@ Array
                             </pre>
 
                         </div>
-
+                        dus, http://www.domein.be/steve/ verwijst naar index.php?user=steve (niet dynamisch, hardcode in RewriteRule) 
                     </li>
                 </ul>
 
-            <h1>Opdracht mod_rewrite: deel4: rewriterule op basis van GET-variabele: meerdere variabelen</h1>
+            <h1>Opdracht mod_rewrite: deel 4: rewriterule op basis van GET-variabele: meerdere variabelen</h1>
                 
             <ul>
                   <li>Zorg er nu voor dat er meerdere get-variabelen worden ingevuld (= hardcoded). Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?role=admin&user=rasmus
@@ -117,10 +121,12 @@ Array
 
                         </div>
 
+                     dus, http://www.domein.be/eenderdwat/ verwijst naar index.php?user=eenderwat (dynamisch, opgevangen via group RewriteRule) 
+
                   </li>
             </ul>
 
-            <h1>Opdracht mod_rewrite: deel4: rewriterule op basis van GET-variabele: meerdere variabelen dynamisch</h1>
+            <h1>Opdracht mod_rewrite: deel 5: rewriterule op basis van GET-variabele: meerdere variabelen dynamisch</h1>
               
             <ul>
                 <li>Wanneer iemand surft naar http://www.app.local/admin/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?role=admin&user=rasmus
