@@ -1,5 +1,8 @@
 <?php
-		$feeling = 'I\'m fine\\';
+		$feeling = 'I\'m fine';
+
+		// Wat als je een backward slash wil afdrukken?
+		// Simpel! $string = '\\';
 ?>
 
 <!DOCTYPE html>
