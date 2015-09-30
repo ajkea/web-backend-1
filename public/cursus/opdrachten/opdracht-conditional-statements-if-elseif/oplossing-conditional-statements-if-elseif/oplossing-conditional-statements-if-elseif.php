@@ -11,7 +11,7 @@
 		$onderGrens	=	0;
 		$bovenGrens	=	10;
 	}
-	if ($getal >= 10 && $getal < 20)
+	elseif ($getal >= 10 && $getal < 20)
 	{
 		$onderGrens	=	10;
 		$bovenGrens	=	20;
