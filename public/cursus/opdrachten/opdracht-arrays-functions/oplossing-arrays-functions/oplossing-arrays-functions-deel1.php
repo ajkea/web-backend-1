@@ -4,7 +4,7 @@
 
 	$aantalDieren	=	count( $dieren );
 
-	$teZoekenDier	=	"kat";
+	$teZoekenDier	=	"qsdf";
 
 	$dierGevonden	=	array_search( $teZoekenDier, $dieren );
 
@@ -27,7 +27,7 @@
 	
 		<p>Aantal dieren: <?= $aantalDieren ?></p>
 
-		<?php if ( $dierGevonden ): ?>
+		<?php if ( $dierGevonden !== false ): ?>
 			
 			<p>Het dier "<?= $teZoekenDier ?>" komt voor in de array $dieren</p>
 
