@@ -1,25 +1,22 @@
-<?php
+<?php 
 
-	$timestamp	=	mktime( 22, 35, 25, 01, 21, 1904 );
+	$timestamp	=	mktime(22, 35, 25, 01, 21, 1904);
 
-	//setlocale( LC_ALL, 'nld_nld' );
-	$date	=	strftime( '%d %B %Y, %H:%M:%S %p', $timestamp );
-
+	$datum	=	date('d F Y, g:i:s A', $timestamp);
 ?>
 
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
-    	<title>Oplossing date: deel1</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Oplossing date</title>
     </head>
     <body>
-		
-		<h1>Oplossing date: deel1</h1>
 
-		<p>De timestamp van 22u 35m 25sec 21 januari 1904 is <?= $timestamp ?></p>
+		<h1>Oplossing date</h1>
 
-		<p>De timestamp omgezet naar een datum: <?= $date ?></p>
+		<p><?= $datum ?></p>
+
     </body>
 </html>
