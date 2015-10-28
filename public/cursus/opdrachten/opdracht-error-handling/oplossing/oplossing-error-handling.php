@@ -24,10 +24,9 @@
 			}
 			else
 			{
-				else 
-				{
-					throw new Exception( 'SUBMIT-ERROR' );
-				}	
+				
+				throw new Exception( 'SUBMIT-ERROR' );
+	
 			}
 
 		}
