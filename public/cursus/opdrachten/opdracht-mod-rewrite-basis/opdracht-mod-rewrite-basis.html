@@ -56,7 +56,7 @@
             <h1>Opdracht mod_rewrite: deel 2: rewriterule op basis van GET-variabele</h1>
 
             <ul>
-                <li>Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?user=rasmus</li>
+                <li>Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/index.php?user=rasmus</li>
 
                 <li>Je mag dit eerst proberen door de <code>RewriteRule</code> hard te coderen per persoon waar je naar kan surfen, of je mag dit opvangen met een group (zie Deel 3)</li>
 
@@ -98,14 +98,16 @@ Array
                             </pre>
 
                         </div>
-                        dus, http://www.domein.be/steve/ verwijst naar index.php?user=steve (niet dynamisch, hardcode in RewriteRule) 
+                        dus, http://www.domein.be/steve/ verwijst naar index.php?user=steve 
                     </li>
+
+                    De naam van de gebruiker zou nu niet meer hardcoded in de Regular Expression in de <span class="directory-sa-file">.htaccess</span> mogen staan, maar opgevangen moeten worden door een group
                 </ul>
 
             <h1>Opdracht mod_rewrite: deel 4: rewriterule op basis van GET-variabele: meerdere variabelen</h1>
                 
             <ul>
-                  <li>Zorg er nu voor dat er meerdere get-variabelen worden ingevuld (= hardcoded). Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?role=admin&user=rasmus
+                  <li>Zorg er nu voor dat er meerdere get-variabelen worden ingevuld (= hardcoded). Wanneer iemand surft naar http://www.app.local/rasmus/ moet de  de url achter de schermen gerewrite worden naar http://www.app.local/original.php?user=rasmus&role=admin
 
                     <div class="facade-minimal" data-url="http://www.app.local/rasmus/">
                         
