@@ -15,9 +15,9 @@
             <h1>Opdracht classes: begin</h1>
 
             <ul>
-                <li>De bedoeling van deze oefening is om een klasse te maken die berekent hoeveel procent een getal is gebaseerd op een eenheid, bv. hoeveel procent is 150 van 100(=eenheid)? -> 150 delen door 100 -> 1.5</li> 
+                <li>De bedoeling van deze oefening is om een klasse te maken die berekent hoe een getal is gebaseerd op een eenheid, bv. hoeveel procent is 150 van 100(=eenheid)? -> 150 delen door 100 -> 1.5</li> 
                 
-                <li>Het moet mogelijk zijn om deze uitkomst op 4 verschillende manieren op te roepen (absoluut, relatief, op basis van een geheel getal en een nominale waarde). Dit doe je door deze members van de klasse aan te spreken, bv. $instantie->absolute.</li>
+                <li>Het moet mogelijk zijn om deze uitkomst op 3 verschillende manieren op te roepen (relatief, procentueel en een nominale waarde). Dit doe je door deze members van de klasse aan te spreken, bv. $instantie->relative.</li>
 
                 <li>De structuur van deze oefening ziet er als volgt uit:
                     <ul class="directory">
@@ -36,20 +36,18 @@
                         <li>Maak een bestand Percent.php aan. Hierin zit een klasse Percent die de volgende properties bevat:
 
                             <ul>
-                                <li><code>$absolute</code> (member, public)</li>
                                 <li><code>$relative</code> (member, public)</li>
                                 <li><code>$hundred</code> (member, public)</li>
                                 <li><code>$nominal</code> (member, public)</li>
                                 <li><code>__construct</code> (method, public) met twee parameters: <code>$new</code> en <code>$unit</code>
                                     <ul>
-                                        <li>Deze constructor zet <code>$absolute</code> gelijk aan de waarde van <code> $new / $unit</code></li>
-                                        <li><code>$relative</code> gelijk aan de member <code>$absolute – 1</code></li>
-                                        <li><code>$hundred</code> gelijk aan <code>$absolute * 100</code></li>
+                                        <li>Deze constructor zet <code>$relative</code> gelijk aan de member <code>$new/$unit</code></li>
+                                        <li><code>$hundred</code> gelijk aan <code>$relative * 100</code></li>
                                         <li><code>$nominal</code> gelijk aan:
                                             <ul>
-                                                <li><code>'positive'</code> wanneer <code>$absolute</code> groter is dan 1</li>
-                                                <li><code>'status-quo'</code> wanneer <code>$absolute</code> gelijk is aan 1</li>
-                                                <li><code>'negative'</code> wanneer <code>$absolute</code> kleiner is dan 1</li>
+                                                <li><code>'positive'</code> wanneer <code>$relative</code> groter is dan 1</li>
+                                                <li><code>'status-quo'</code> wanneer <code>$relative</code> gelijk is aan 1</li>
+                                                <li><code>'negative'</code> wanneer <code>$relative</code> kleiner is dan 1</li>
                                             </ul>
                                         </li>
                                         <li>Let op, alle getallen moeten met twee cijfers na de komma opgeslagen worden</li>
@@ -91,21 +89,17 @@
                                 }
                             </style>
                             <table>
-                                <caption>Hoeveel procent is 150 van 100?</caption>
+                                <caption>Hoe staat 150 in verhouding tot 100?</caption>
                                 <thead></thead>
                                 <tfoot></tfoot>
-                                <tbody>
+                                <tbody> 
                                     <tr>
-                                        <td>Absoluut</td>
+                                        <td>Relatief</td>
                                         <td>1.50</td>
                                     </tr>
                                     <tr>
-                                        <td>Relatief</td>
-                                        <td>0.50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Geheel getal</td>
-                                        <td>50%</td>
+                                        <td>Procentueel</td>
+                                        <td>150%</td>
                                     </tr>
                                     <tr>
                                         <td>Nominaal</td>
