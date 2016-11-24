@@ -45,7 +45,7 @@
 
                 <li>Voer de nodige controles uit, maar na de controle of de <code>$_POST[ 'submit' ]</code> goed is doorgekomen, doe je een extra controle om te kijken of het <code>$_POST[ 'code' ]</code> niet ontbreekt.</li>
 
-                <li>Als de het veld ontbreekt:
+                <li>Als het veld ontbreekt:
                     <ul>
                         <li>Dan moet dit gemonitord worden. Dit kan afgehandeld worden via een try/catch blok</li>
 
