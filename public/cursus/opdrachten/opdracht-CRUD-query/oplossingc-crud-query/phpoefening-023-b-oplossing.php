@@ -35,7 +35,7 @@
 
 			$bierenStatement = $db->prepare( $bierenQueryString );
 
-			$bierenStatement->bindParam( ':brouwernr', $_GET[ 'brouwernr' ] );
+			$bierenStatement->bindValue( ':brouwernr', $_GET[ 'brouwernr' ] );
 
 		}
 		else

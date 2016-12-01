@@ -18,6 +18,8 @@
 	* Elke nieuwe regel begin je best met een * (gebeurt automatisch in bv. Eclipse)
 	* Wordt vooral gebruik voor lange commentaarblokken.
 	*/
+
+	echo "test";
 ?>
 
 <!DOCTYPE html>

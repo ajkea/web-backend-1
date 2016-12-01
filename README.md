@@ -74,9 +74,11 @@ Complete Web Backend Course (PHP)
       Bij het aanmaken van je GitHub repository stelde GitHub een stappenplan voor dat je kon volgen om je lokale versie aan de online versie te koppelen. Is dit niet het geval, kan je de onderstaande stappen volgen.
       ````
       git init
-      git remote add origin URL-VAN-GITHUB-REPO
+      git remote add origin URL-VAN-GITHUB-REPO.git
       ````
-      De `remote add origin URL` staat voor een online versie van de GitHub repo linken aan een alias, in dit geval origin.
+      Let op: vergeet niet achter de url van de repo .git te plaatsen.
+      
+      De `remote add origin URL` staat voor een online versie van de GitHub repo linken aan een alias, in dit geval origin. 
 
     2. Bekijk de status van je lokale git repository om te weten te komen welke bestanden er gewijzigd/toegevoegd/verwijderd zijn
        ````
@@ -111,4 +113,4 @@ Complete Web Backend Course (PHP)
 ## Contributors
 
 
-[Giele Cools](https://github.com/GieleCools), [Sam Schuddinck](https://github.com/TheNumber4/), [Jim Peeters](https://github.com/jimpeeters), [Stijn De Ridder](https://github.com/DeRidderStijn), [Ruud Luijten](https://github.com/rluijten/ ), [Jeroen Van den Broeck](https://www.github.com/jeroenjvdb), [Ruben Wouters](https://github.com/Ravar33), [Christoph Van Hees](https://github.com/Christophvh), [Floor Leemans](https://github.com/FloorLeemans), [Jonas Iliaens](https://github.com/jonasiliaens), [Anton Patokin](https://github.com/Anton-Patokin/), [Rowan Van Ekeren](https://github.com/rowanvanekeren/)
+[Giele Cools](https://github.com/GieleCools), [Sam Schuddinck](https://github.com/TheNumber4/), [Jim Peeters](https://github.com/jimpeeters), [Stijn De Ridder](https://github.com/DeRidderStijn), [Ruud Luijten](https://github.com/rluijten/ ), [Jeroen Van den Broeck](https://www.github.com/jeroenjvdb), [Ruben Wouters](https://github.com/Ravar33), [Christoph Van Hees](https://github.com/Christophvh), [Floor Leemans](https://github.com/FloorLeemans), [Jonas Iliaens](https://github.com/jonasiliaens), [Anton Patokin](https://github.com/Anton-Patokin/), [Rowan Van Ekeren](https://github.com/rowanvanekeren/) [Sophie Moons](https://github.com/SophieMoons/), [Hasan Gurbuz](https://github.com/gurbuzhasan/)

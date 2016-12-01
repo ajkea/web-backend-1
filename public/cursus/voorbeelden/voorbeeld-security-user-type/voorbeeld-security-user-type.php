@@ -21,8 +21,8 @@
 			// Een query klaarmaken. 
 			$statement = $db->prepare($queryString);
 
-			$statement->bindParam(':username', $_POST['username']);
-			$statement->bindParam(':password', $_POST['password']);
+			$statement->bindValue(':username', $_POST['username']);
+			$statement->bindValue(':password', $_POST['password']);
 
 		
 			// Een query uitvoeren
