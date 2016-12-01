@@ -41,23 +41,20 @@
 <body>
 
 <table>
-	<caption>Hoeveel procent is <?php echo $new ?> van <?php echo $unit ?>?</caption>
-	<tr>
-		<td>Absoluut</td>
-		<td><?php echo $percent->absolute ?></td>
-	</tr>
+	<caption>Hoe staat <?= $new ?> in verhouding tot <?= $unit ?>?</caption>
 	<tr>
 		<td>Relatief</td>
-		<td><?php echo $percent->relative ?></td>
+		<td><?= $percent->relative ?></td>
 	</tr>
 	<tr>
-		<td>Geheel getal</td>
-		<td><?php echo $percent->hundred ?>%</td>
+		<td>Procentueel</td>
+		<td><?= $percent->hundred ?>%</td>
 	</tr>
 	<tr>
 		<td>Nominaal</td>
-		<td><?php echo $percent->nominal ?></td>
+		<td><?= $percent->nominal ?></td>
 	</tr>
+	
 </table>
 
 </body>
