@@ -15,7 +15,7 @@
 			<h1>Opdracht error handling: try catch: deel 1</h1>
 
 			<ul>
-				<li>De bedoeling is om een formulier te maken waar je een code op kan ingeven. Er wordt gecontroleerd op twee dingen: of er niet geknoeid is het POST-formulier heeft geknoeid én of de code correct is (= een lengte van 8 karakters). Wanneer een van beide niet klopt, wordt deze opgeworpen in een catch blok waar de afhandeling gebeurt en de fout wordt opgeslagen in een log-file.</li>
+				<li>De bedoeling is om een formulier te maken waar je een code op kan ingeven. Er wordt gecontroleerd op twee dingen: of er niet geknoeid is met het POST-formulier én of de code correct is (= een lengte van 8 karakters). Wanneer een van beide niet klopt, wordt deze opgeworpen in een catch blok waar de afhandeling gebeurt en de fout wordt opgeslagen in een log-file.</li>
 
                 <li>De layout ziet er als volgt uit:
 
