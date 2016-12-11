@@ -11,7 +11,6 @@
 
 	try
 	{
-		// ROOT PASS = "" ipv root
 		$db = new PDO('mysql:host=localhost;dbname=voorbeeld-security-tracking-details', 'root', 'root', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // Connectie maken
 		$queryString = 'SELECT * FROM artikels'; // -- alle artikels
 
