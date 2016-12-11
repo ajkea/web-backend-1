@@ -11,7 +11,7 @@
 
 	try
 	{
-		$db = new PDO('mysql:host=localhost;dbname=voorbeeld-security-tracking-details', 'root', 'root', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // Connectie maken
+		$db = new PDO('mysql:host=localhost;dbname=voorbeeld-security-tracking-details', 'root', '', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // Connectie maken
 		$queryString = 'SELECT * FROM artikels'; // -- alle artikels
 
 		 if (isset($_GET)) {
@@ -23,7 +23,7 @@
 			 {
 				 	$queryString = 'SELECT * FROM artikels WHERE is_active = 0'; // -- niet actieve artikels
 			 }
-			 if (isset($_GET["everything"]))
+			 if (isset($_GET["all"]))
 			 {
 					$queryString = 'SELECT * FROM artikels'; // -- alle artikels
 			 }
@@ -68,11 +68,14 @@
 
 		<p><a href="voorbeeld-security-tracking-details-artikel-toevoegen-form.php">Voeg een artikel toe</a></p>
 
-		<form action="<?php $_PHP_SELF ?>" method="GET">
-			<input type="submit" name="everything" value="Alle artikels"></input>
-			<input type="submit" name="active" value="Actieve artikels"></input>
-			<input type="submit" name="inactive" value="Niet actieve artikels"></input>
-		</form>
+		<!-- <form action="<?php $_PHP_SELF ?>" method="GET">
+			<input type="submit" name="everything" action="" value="Alle artikels" id="all"></input>
+			<input type="submit" name="active" value="Actieve artikels" id="active"></input>
+			<input type="submit" name="inactive" value="Niet actieve artikels" id="non-active"></input>
+		</form> -->
+		<a href="<?= "http://web-backend.local/voorbeeld-security-tracking-details-046-get-method.php?artikelType=all"?>">Alle artikels</a>
+		<a href="<?= "http://web-backend.local/voorbeeld-security-tracking-details-046-get-method.php?artikelType=active"?>">Actieve artikels</a>
+		<a href="<?= "http://web-backend.local/voorbeeld-security-tracking-details-046-get-method.php?artikelType=inactive"?>">Niet actieve artikels</a>
 
 		<?php if (isset($message)): ?>
 			<div class="modal <?php echo $message['type'] ?>">
