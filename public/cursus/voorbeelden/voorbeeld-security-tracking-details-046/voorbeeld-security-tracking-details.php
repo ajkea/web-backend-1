@@ -11,12 +11,24 @@
 
 	try
 	{
+		// ROOT PASS = "" ipv root
 		$db = new PDO('mysql:host=localhost;dbname=voorbeeld-security-tracking-details', 'root', 'root', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // Connectie maken
+		$queryString = 'SELECT * FROM artikels'; // -- alle artikels
 
-		// Een query klaarmaken. 
-		$queryString = 'SELECT *
-							FROM artikels
-							WHERE is_active = 1';
+		 if (isset($_GET)) {
+			 if (isset($_GET["active"]))
+			 {
+				 	$queryString = 'SELECT * FROM artikels WHERE is_active = 1'; // -- actieve artikels
+			 }
+			 if (isset($_GET["inactive"]))
+			 {
+				 	$queryString = 'SELECT * FROM artikels WHERE is_active = 0'; // -- niet actieve artikels
+			 }
+			 if (isset($_GET["everything"]))
+			 {
+					$queryString = 'SELECT * FROM artikels'; // -- alle artikels
+			 }
+		}
 
 		$statement = $db->prepare($queryString);
 
@@ -57,7 +69,11 @@
 
 		<p><a href="voorbeeld-security-tracking-details-artikel-toevoegen-form.php">Voeg een artikel toe</a></p>
 
-		<h2>Overzicht van alle artikels</h2>
+		<form action="<?php $_PHP_SELF ?>" method="GET">
+			<input type="submit" name="everything" value="Alle artikels"></input>
+			<input type="submit" name="active" value="Actieve artikels"></input>
+			<input type="submit" name="inactive" value="Niet actieve artikels"></input>
+		</form>
 
 		<?php if (isset($message)): ?>
 			<div class="modal <?php echo $message['type'] ?>">
@@ -67,18 +83,17 @@
 
 		<ul>
 			<?php foreach ( $fetchAssoc as $row): ?>
-
 					<li>
 						<ul>
 						<?php foreach ( $row as $keyname => $value): ?>
 							<li>
-								<?php echo $keyname ?>: <?php echo $value ?>								
+								<?= $keyname ?>: <?= $value ?>
 							</li>
 						<?php endforeach ?>
 						</ul>
-						<a href="voorbeeld-security-tracking-details-artikel-verwijderen.php?artikel=<?= $row['id'] ?>">Verwijder artikel</a>
+						<!--  Show / Hide changed -->
+						<a href="voorbeeld-security-tracking-details-artikel-verwijderen.php?artikel=<?= $row['id'] ?>">Show/Hide</a>
 					</li>
-				
 			<?php endforeach ?>
 		</ul>
 
