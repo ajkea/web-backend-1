@@ -35,7 +35,7 @@ try
 				else 
 				{
 				
-					// Anders mag het bestand geüpload worden naar de map
+					// Anders mag het bestand geÃ¼pload worden naar de map
 					move_uploaded_file($_FILES["file"]["tmp_name"], (ROOT . "/img/" . $_FILES["file"]["name"]));
 					
 					$message[ 'type' ]		= 'success';
@@ -81,8 +81,8 @@ catch( Exception $e )
 		<?php if ( $message ): ?>
 			<div class="modal <?= $message[ 'type' ] ?>">
 				<ul>
-					<?php foreach ($message['text'] as $name => $value): ?>
-						<li><?= $name ?>: <?= $value ?></li>
+					<?php foreach ($message as $name => $value): ?>
+						<li><?= $value ?></li>
 					<?php endforeach ?>
 				</ul>
 			</div>
