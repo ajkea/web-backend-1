@@ -179,7 +179,7 @@
 
                 <li>Haal nu op basis van het e-mailadres uit de cookie de salt die bij dit e-mailadres hoort op uit de database users-tabel</li>
 
-                <li>Controleer of het de hash van het e-mailadres geconcateneerd met de salt uit de database gelijk is aan de hash die je uit de cookie hebt gehaald.</li>
+                <li>Controleer of de hash van het e-mailadres geconcateneerd met de salt uit de database gelijk is aan de hash die je uit de cookie hebt gehaald.</li>
 
                 <li>Als dit het geval is, is de gebruiker correct gevalideerd en mag de inhoud van het dashboard getoond worden, anders moet de cookie <code>unset()</code> worden, dit duidt immers op een cookie waar mogelijk mee geknoeid is, en moet er geredirect worden naar de login pagina.</li>
 
@@ -260,7 +260,7 @@
 
                         <li>Haal de salt op uit de database zoals bij de pagina registratie-process.php</li>
 
-                        <li> Controlleer of de hash van het (ingevulde paswoord + salt), gelijk is aan de password-kolom uit de database</li>
+                        <li> Controleer of de hash van het (ingevulde paswoord + salt), gelijk is aan de password-kolom uit de database</li>
 
                         <li>Als dit niet het geval is zet dan een gepaste boodschap in de <code>$_SESSION['notification']</code> en redirect naar login-form.php</li>
 
