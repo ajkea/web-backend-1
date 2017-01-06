@@ -83,58 +83,74 @@
 		}
 	}
 
-	function generatePassword($length, 
-								$numeric = TRUE, 
-								$alphanumeric = FALSE, 
-								$alphanumericUppercase = FALSE, 
-								$specialChars = FALSE
-								) {
-		
-		$passwordDump = ''; //Hierin komen alle willekeurige karakters van het paswoord te staan.
-		
-		$passwordCharacters = array(); //Hierin komen alle toegelaten arrays met karakters te staan.
-		
-		if ($numeric) {
-			$passwordCharacters['numeric'] = array(0,1,2,3,4,5,6,7,8,9); // hardcoded array met opeenvolgende cijfers/letters kunnen vervangen worden door (voor bv. cijfers) range(0,9)
-		}	
-		
-		if ($alphanumeric) {
-			$passwordCharacters['alphanumericString'] = array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
-		}	
-		
-		if ($alphanumericUppercase) {
-			$passwordCharacters['alphanumericUppercaseString'] = array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
-		}	
-		
-		if ($specialChars) {
-			$passwordCharacters['specialChars'] = array('+','-','*','/','$','%','@','#','_');
-		}
-		
-		$characterCount = 0;
-		
-		while ($characterCount < $length) {
-		
-			$arrayCount = 0; //Dient om de array in $passwordCharacters te kunnen overlopen. Wordt per keer de whilelus doorlopen wordt, weer op 0 gezet.
-		
-			foreach ($passwordCharacters as $value) { //Overloopt alle values (= array met alle toegestande karakters) in de array $passwordCharacters
-			
-				if ($characterCount < $length) { // Er mag een karakter toegevoegd worden aan de passwordDump zolang characterCount kleiner is dan de opgegeven lengte
-				
-					$randomCharacter = rand(0,(count($value)-1)); //Selecteert een willekeurige value uit de array met karakters. Het grootste random getal mag maximum zo groot zijn als de count van de array met karakters - 1 (nulwaarde van count() is altijd gelijk aan 1!)
-					
-					$passwordDump .= $value[$randomCharacter]; //Het willekeurige getal dat maximum zo groot is als het laatste karakter in de array moet toegevoegd worden aan de passwordDump
-					
-					$characterCount++; //Tel ééntje op bij de characterCount die bijhoudt hoeveel karakters er al gebruikt zijn
-				}
-				
-				$arrayCount++; //Tel eentje op zodat de volgende array met karakters geselecteerd kan worden.
-			}
-		}
-		
-		$passwordDump = str_shuffle($passwordDump); //Zet alle karakters van een string in willekeurige volgorde. Garandeert optimale willekeurigheid.
-		
-		return $passwordDump; //Geef het gegenereerde paswoord terug aan de oproeper (caller) van de functie.
-	}
+	function generatePassword($length) {
+
+
+		$passwordRequirements = FALSE;
+
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-*/$%@#_';
+	    
+	    while(!$passwordRequirements){
+
+
+
+
+		#maakt random wachtwoord
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length+1; $i++)#null-based dus + 1 
+	    {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+
+	    #vormt string naar array
+	    $arrayCharacters = str_split($randomString);
+
+
+	    #voorwaarden paswoord requirements voldaan
+	    $alfabetSmall = FALSE;
+		$alfabetCaps = FALSE;
+		$numeric = FALSE;
+		$symbol = FALSE;
+
+
+	    #loopen array
+	    foreach ($arrayCharacters as $value) {
+	   
+
+
+		    if($numeric && $alfabetSmall && $alfabetCaps && $symbol ){
+		    	$passwordRequirements = TRUE;
+		    	$alfabetSmall = FALSE;
+				$alfabetCaps = FALSE;
+				$numeric = FALSE;
+				$symbol = FALSE;
+		    }	
+		    else
+		    {
+		    	$passwordRequirements = FALSE;
+		    	if (ctype_digit($value)){
+		    		$numeric = TRUE;
+		    	}
+
+		    	if (ctype_lower($value)){
+		    		$alfabetSmall = TRUE;
+		    	}
+
+		    	if (ctype_upper($value)){
+		    		$alfabetCaps = TRUE;
+		    	}
+
+		    	if (ctype_punct($value)){
+		    		$symbol = TRUE;
+		    	}
+		    }//einde else voor controle voorwaarde
+		}//foreach loop
+	    }//einde while
+	    return $randomString;
+
+	echo $randomString;
+	}//einde functie
 
 
 
